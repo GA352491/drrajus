@@ -1,0 +1,1341 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title> Application Guidance </title>
+{% endblock %}
+
+{% block style %}
+
+    <style>
+        .carousel {
+            width: 1200px;
+        }
+    </style>
+    <style>
+        /* This css file is to over write bootstarp css
+---------------------------------------------------------------------- */
+
+
+        /*
+        Theme Name: Modern - Bootstrap 4 Cards
+        Theme URI: http://adamthemes.com/
+        Author: AdamThemes
+        Author URI: http://adamthemes.com/
+        Description: Modern - Bootstrap 4 Cards by AdamThemes
+        Version: 1.0
+        License: GNU General Public License v2 or later
+        License URI: http://www.gnu.org/licenses/gpl-2.0.html
+        Tags: card, cards, css3, modern, adamthemes, bootstrap, profile
+        *---------------------------------------------------------------------- */
+
+
+        /*----------------------------------------------------------------------
+        TABLE OF CONTENTS
+
+        // 1. SECTIONS
+        // 2. CARDS
+        //      2.1 Card Table
+        //      2.1 Card Blog
+        //      2.1 Card Background
+        //      2.1 Card Profile
+        //      2.1 Card Category
+        //      2.1 Card Author
+        //      2.1 Card Product
+        //      2.1 Card Testimonial
+        //      2.1 Text Color
+        // 3. BUTTONS
+        // 4. SOCIAL MEDIA BUTTONS
+        // 5. BOOTSTRAP COL-MD-12 CLASS
+        // 6. FONT AWESOME FA CLASS
+
+        ------------------------------------------------------------------------*/
+
+
+        /*---------------------------------------------------------------------- /
+        SECTIONS
+        ----------------------------------------------------------------------- */
+
+        .section-cards {
+            z-index: 3;
+            position: relative;
+        }
+
+        .section-gray {
+            background: #E5E5E5;
+            padding: 60px 0 30px 0;
+        }
+
+
+        /*---------------------------------------------------------------------- /
+        CARDS
+        ----------------------------------------------------------------------- */
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            color: rgba(0, 0, 0, 0.87);
+            background: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .card .card-image {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: -30px;
+            border-radius: 6px;
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .card-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+
+        .card .card-image .card-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            font-size: 1.3em;
+            text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-raised {
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .ftr {
+            margin-top: 15px;
+        }
+
+        .card .ftr div {
+            display: inline-block;
+        }
+
+        .card .ftr .author {
+            color: #888;
+        }
+
+        .card .ftr .stats {
+            float: right;
+            line-height: 30px;
+        }
+
+        .card .ftr .stats {
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+        }
+
+
+        /* ============ Card Table ============ */
+
+        .table {
+            margin-bottom: 0px;
+        }
+
+        .card .table {
+            padding: 15px 30px;
+        }
+
+        .card .table-primary {
+            background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+        }
+
+        .card .table-info {
+            background: linear-gradient(60deg, #26c6da, #0097a7);
+        }
+
+        .card .table-success {
+            background: linear-gradient(60deg, #66bb6a, #388e3c);
+        }
+
+        .card .table-warning {
+            background: linear-gradient(60deg, #ffa726, #f57c00);
+        }
+
+        .card .table-danger {
+            background: linear-gradient(60deg, #ef5350, #d32f2f);
+        }
+
+        .card .table-rose {
+            background: linear-gradient(60deg, #ec407a, #c2185b);
+        }
+
+        .card [class*="table-"] {
+            color: #FFFFFF;
+            border-radius: 6px;
+        }
+
+        .card [class*="table-"] .card-caption a,
+        .card [class*="table-"] .card-caption,
+        .card [class*="table-"] .icon i {
+            color: #FFFFFF;
+        }
+
+        .card [class*="table-"] .icon i {
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .card [class*="table-"] .author a,
+        .card [class*="table-"] .ftr .stats,
+        .card [class*="table-"] .category,
+        .card [class*="table-"] .card-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card [class*="table-"] .author a:hover,
+        .card [class*="table-"] .author a:focus,
+        .card [class*="table-"] .author a:active {
+            color: #FFFFFF;
+        }
+
+        .card [class*="table-"] h1 small,
+        .card [class*="table-"] h2 small,
+        .card [class*="table-"] h3 small {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+
+        /* ============ Card Blog ============ */
+
+        .card-blog {
+            margin-top: 30px;
+        }
+
+        .card-blog .card-caption {
+            margin-top: 5px;
+        }
+
+        .card-blog .card-image + .category {
+            margin-top: 20px;
+        }
+
+        .card-raised {
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* ============ Card Background ============ */
+
+        .card-background {
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .card-background .table {
+            position: relative;
+            z-index: 2;
+            min-height: 280px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .card-background .category,
+        .card-background .card-description,
+        .card-background small {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-background .card-caption {
+            color: #FFFFFF;
+            margin-top: 10px;
+        }
+
+        .card-background:after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0;
+            top: 0;
+            table: "";
+            background-color: rgba(0, 0, 0, 0.56);
+            border-radius: 6px;
+        }
+
+
+        /* ============ Card Profile ============ */
+
+        .card-profile {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+
+        /* ============ Card Category ============ */
+
+        .category {
+            position: relative;
+            line-height: 0;
+            margin: 15px 0;
+        }
+
+        .card .category-social .fa {
+            font-size: 24px;
+            position: relative;
+            margin-top: -4px;
+            top: 2px;
+            margin-right: 5px;
+        }
+
+
+        /* ============ Card Author ============ */
+
+        .card .author .avatar {
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .card .author a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .card .author a .ripple-cont {
+            display: none;
+        }
+
+
+        /* ============ Card Product ============ */
+
+        .card-product {
+            margin-top: 30px;
+        }
+
+        .card-product .btn-simple.btn-just-icon {
+            padding: 0;
+        }
+
+        .card-product .ftr {
+            margin-top: 5px;
+        }
+
+        .card-product .ftr .stats {
+            margin-top: 4px;
+            top: 0;
+        }
+
+        .card-product .ftr h4 {
+            margin-bottom: 0;
+        }
+
+        .card-product .card-caption,
+        .card-product .category,
+        .card-product .card-description {
+            text-align: center;
+        }
+
+        .card-description p {
+            color: #888;
+        }
+
+        .card-caption,
+        .card-caption a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .card-caption {
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+        }
+
+
+        /* ============ Card Testimonial ============ */
+
+        .card-testimonial {
+            margin-top: 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .card-profile .btn-just-icon.btn-raised,
+        .card-testimonial .btn-just-icon.btn-raised {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .card-profile .card-avatar,
+        .card-testimonial .card-avatar {
+            max-width: 130px;
+            max-height: 130px;
+            margin: -25px auto 0;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-profile.card-plain .card-avatar,
+        .card-testimonial.card-plain .card-avatar {
+            margin-top: 0;
+        }
+
+        .card-testimonial .card-avatar {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .card-testimonial .card-description {
+            font-style: italic;
+        }
+
+        .card-testimonial .card-description + .card-caption {
+            margin-top: 30px;
+        }
+
+        .card-testimonial .icon {
+            margin-top: 30px;
+        }
+
+        .card-testimonial .icon {
+            font-size: 40px;
+        }
+
+        .card-testimonial .ftr {
+            margin-top: 0;
+        }
+
+        .card-testimonial .ftr .card-avatar {
+            margin-top: 10px;
+            margin-bottom: -50px;
+        }
+
+
+        /* ============ Text Color ============ */
+
+        .text-warning {
+            color: #ff9800;
+        }
+
+        .text-primary {
+            color: #9c27b0;
+        }
+
+        .text-danger {
+            color: #f44336;
+        }
+
+        .text-success {
+            color: #4caf50;
+        }
+
+        .text-info {
+            color: #00bcd4;
+        }
+
+        .text-rose {
+            color: #e91e63;
+        }
+
+        .text-gray {
+            color: #888;
+        }
+
+        /*---------------------------------------------------------------------- /
+        SOCIAL MEDIA BUTTONS
+        ----------------------------------------------------------------------- */
+
+        /*---------------------------------------------------------------------- /
+        BOOTSTRAP COL-MD-12 CLASS
+        ----------------------------------------------------------------------- */
+
+        .col-md-12 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+
+        /*---------------------------------------------------------------------- /
+        FONT AWESOME FA CLASS
+        ----------------------------------------------------------------------- */
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /***********Only4Demo*******************/
+        /**************************************/
+
+        /* ======= GENERAL  ======= */
+
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        p {
+            color: #3C4857;
+        }
+
+        header {
+            border-bottom: 1px solid #dedede;
+            text-align: center;
+        }
+
+
+        h1, .h1 {
+            font-size: 3.8em;
+        }
+
+        h2, .h2 {
+            font-size: 2.0em;
+            line-height: 1.6em;
+            margin: 15px 0 15px;
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+            text-align: center;
+        }
+
+        h3, .h3 {
+            font-size: 1.825em;
+            line-height: 1.4em;
+            margin: 30px 0 30px;
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+            text-align: center;
+        }
+
+        h4, .h4 {
+            font-size: 1.3em;
+            line-height: 1.55em;
+        }
+
+        h5, .h5 {
+            font-size: 1.25em;
+            line-height: 1.55em;
+            margin-bottom: 15px;
+        }
+
+        h6, .h6 {
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+    </style>
+
+{% endblock %}
+
+{% block nav %}
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="background-color: #FFFFFF!important;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'logo/resized.png' %}" alt="logo" width="150px" style="max-width: 220px;">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="{% url 'courses' %}"
+                           style="border-bottom: none">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'consultancy' %}">Application Guidance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'forum' %}">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'About Us' %}">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login/Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <h2 style="text-align: center">Application Guidance</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+        <span style="text-align: center;width: 40%;color: gray">
+
+               Our team of expert counselors will make sure you get into the best Universities you deserve.
+            </span>
+        </div>
+    </div>
+    <div style="padding-top: 40px" class="container-fluid">
+        <div style="background-color: #f7f7f7;">
+            <div class="container" style="margin-top: 70px">
+                <div class="row">
+                    <div class="col-sm-5 order-1 order-lg-1 ">
+                        <img src="{% static 'application guidance /guidance1.svg' %}" class="img-fluid"
+                             alt="Responsive image" style="height: 500px;width: 500px">
+                    </div>
+                    <div class="col-sm-7 order-2 order-lg-2">
+                        <div class="container">
+                            <h3 style="padding-top: 40px">
+                                <b>University Lists </b></h3>
+                            <span>
+                        Get a tailor made University list based on the region you want to study in, field of interest, your qualifications, skills, scores, budget, and career goals.
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 70px;">
+        <div class="row">
+            <div class="col-sm-7 order-2 order-lg-1">
+                <div class="container">
+                    <h3 style="padding-top: 80px">
+                        <b>University Applications </b></h3>
+                    <span>
+                        Although sending your application to a University is quite simple, it’s always good to have an expert to review your application.  Our counselors will clarify any doubts you face in the process.
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-5 order-1 order-lg-2">
+                <img src="{% static 'application guidance /guidance2.svg' %}" class="img-fluid"
+                     alt="Responsive image" style="height: 500px;width: 500px">
+            </div>
+
+        </div>
+    </div>
+
+    <div style="padding-top: 40px" class="container-fluid">
+        <div style="background-color: #f7f7f7;">
+            <div class="container" style="margin-top: 80px">
+                <div class="row">
+                    <div class="col-sm-5 order-1 order-lg-1">
+                        <img src="{% static 'application guidance /guidance3.svg' %}" class="img-fluid"
+                             alt="Responsive image" style="height: 500px;width: 500px">
+                    </div>
+                    <div class="col-sm-7 order-2 order-lg-2">
+                        <div class="container">
+                            <h3 style="padding-top: 80px">
+                                <b>
+                                    SOP & LOR review
+                                </b></h3>
+                            <span>
+
+We will make sure you draft strong essays and letters that represent your profile, goals, and interests in the best way possible to the Admission committee
+                    </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 70px;">
+        <div class="row">
+            <div class="col-sm-7 order-2 order-lg-1">
+                <div class="container">
+                    <h3 style="padding-top: 80px">
+                        <b>Post Admit services.
+                        </b></h3>
+                    <span>
+We will guide you in finding good education loans, Visa related paper-work, and also conduct mock Visa interviews (in case of USA)
+                </span>
+                </div>
+            </div>
+            <div class="col-sm-5 order-1 order-lg-2">
+                <img src="{% static 'application guidance /guidance4.svg' %}" class="img-fluid"
+                     alt="Responsive image" style="height: 400px;width: 400px">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 70px;padding-bottom: 30px">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{% static 'application guidance /guidance5.svg' %}" class="img-fluid"
+                     alt="Responsive image" style="padding-left: 60px">
+            </div>
+            <div class="col-sm-6" style="padding-top: 45px;padding-bottom: 40px">
+                <p>Call us today to know more about our services, or leave us a message at :</p>
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <a href="tel:+91 812532244" class="btn btn-md " tabindex="-1" role="button"
+                           aria-disabled="true"
+                           style="background: #6088c0!important;color: #F2F2F2!important;"><i
+                                class="fas fa-phone-alt"></i> Call
+                        </a>
+
+                    </div>
+                    <div class="d-flex justify-content-center" style="padding-top: 20px">
+                        <i class="fab fa-whatsapp" style="color: #0e76a8"></i><a href="https://wa.me/918125322444">+91
+                        812532244</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        <div class="d-flex justify-content-center">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top d-flex justify-content-center">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                            class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                            class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Ganapathi Raju.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Ganapathi Raju </h4>
+                                        <h6 class="category text-muted">Senior Visa Consultant.</h6>
+                                        <p class="card-description"> 20+ Years expereince in all types of USA
+                                            Visas. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Laxmi.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">LAXMI DANDU </h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor to Usa,Canada and
+                                            Australia </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Neelima.jpeg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Neelima</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor based in USA </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'Alekhya.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Alekhya</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <img class="card-img-top mx-auto d-block"
+                                             src="{% static 'Jayasurya.jpg' %}"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Jayasurya</h4>
+                                        <h6 class="category text-muted">Student Counslor</h6>
+                                        <p class="card-description">Expert Counslor in University Application
+                                            process </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'Alekhya.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Alekhya</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Neelima.jpeg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Neelima</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor based in USA </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Laxmi.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">LAXMI DANDU </h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> Expert University Counselor to Usa,Canada and
+                                            Australia </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Second slide-->
+
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+    <!--
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+                integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+                crossorigin="anonymous"></script>
+
+    -->
+{% endblock %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col md-3">
+                <div class="card" style="height: 600px;">
+                    <div class="card-image">
+                        <img class="card-img-top" src="{% static 'study.jpg' %}"
+                             alt="Card image cap">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">STUDY ABROAD</h5>
+                        <p class="card-text">If you're planning to study abroad, choosing and applying to a right
+                            set of Universities based on your.</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="{% url 'consultancy' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                           role="button"
+                           aria-disabled="true"
+                           style="background:#F2594B;color: white;border-radius: 12px; ">Know more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col md-3">
+                <div class="card" style="height: 600px;">
+                    <div class="card-image">
+                        <img class="card-img-top" src="{% static 'sop.jpg' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">DOCUMENTATION</h5>
+                        <p class="card-text">If you have applied for foreign universities before, you’ll know that
+                            there is a lot of documentation.</p>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="{% url 'consultancy' %}" class="btn mx-auto  btn-lg " tabindex="-1"
+                           role="button"
+                           aria-disabled="true"
+                           style="background:#F2594B;color: white;border-radius: 12px; ">Know more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col md-3">
+                <div class="card" style="height: 600px;">
+                    <div class="card-image">
+                        <img class="card-img-top" src="{% static 'moving.jpg' %}" alt="Card image cap"
+                        >
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">MOVING TO USA?</h5>
+                        <p class="card-text">
+                            We at Dr. Raju’s guide you in making that process simple, effective, and
+                            less-time consuming.
+
+                            We keep a track of all the documentation required, prepare you for interviews, and
+                            suggest best practices in your journey to the United States, be it as a student, working
+                            professional, Traveller or a family member.</p>
+
+                        <a href="{% url 'consultancy' %}" class="btn mx-auto  btn-lg " tabindex="-1"
+                           role="button"
+                           aria-disabled="true"
+                           style="background:#F2594B;color: white;border-radius: 12px; ">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!-- <div class="container-fluid">
+        <div class="team-boxed">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center">Consultants </h2>
+                </div>
+                <div class="row people">
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box"><img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                            <h3 class="name">Ben Johnson</h3>
+                            <p class="title">Musician</p>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent
+                                aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id.
+                                Etiam
+                                dictum feugiat tellus, a semper massa. </p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
+                                    class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box"><img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                            <h3 class="name">Emily Clark</h3>
+                            <p class="title">Artist</p>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent
+                                aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id.
+                                Etiam
+                                dictum feugiat tellus, a semper massa. </p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
+                                    class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box"><img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                            <h3 class="name">Carl Kent</h3>
+                            <p class="title">Stylist</p>
+                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent
+                                aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id.
+                                Etiam
+                                dictum feugiat tellus, a semper massa. </p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
+                                    class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+<!--<div class="container-fluid">
+
+
+        <div class="cards" id="card0">
+
+            <div class="card-body ">
+
+                <img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                <h3 class="name">Ben Johnson</h3>
+                <p class="title">Consultant</p>
+                <p class="card-text"> University</p>
+
+            </div>
+        </div>
+
+        <div class="cards" id="card1">
+
+            <div class="card-body ">
+
+                <img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                <h3 class="name">Ben </h3>
+                <p class="title">Musician</p>
+                <p class="card-text">Aenean tortor est,. </p>
+
+            </div>
+
+        </div>
+        <div class="cards" id="card2">
+
+            <div class="card-body ">
+
+                <img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                <h3 class="name"> Johnson</h3>
+                <p class="title">Musician</p>
+                <p class="card-text">Aenean tortor . </p>
+
+            </div>
+        </div>
+
+        <div class="cards" id="card3">
+
+            <div class="card-body ">
+
+                <img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                <h3 class="name">Ben John</h3>
+                <p class="title">Musician</p>
+                <p class="card-text">Aenean tortor est, </p>
+
+            </div>
+        </div>
+
+        <div class="cards" id="card4">
+
+            <div class="card-body ">
+
+                <img class="rounded-circle" src="{% static 'Ganapathi Raju.jpg' %}">
+                <h3 class="name">ohnson</h3>
+                <p class="title">Musician</p>
+                <p class="card-text">Aenean tortor est. </p>
+
+            </div>
+        </div>
+
+
+    </div>-->
+<div class="d-flex justify-content-center">
+    <a class="btn mx-auto btn-lg " tabindex="-1" data-toggle="modal"
+       data-target="#exampleModal"
+       role="button"
+       aria-disabled="true"
+       style="background:#ABBABE;border-radius: 12px; ">Book Appointment </a>
+    ]
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Mobile no</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Time</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn " style="background-color:#ABBABE!important; ">Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<h3 style="text-align: center">Consultants</h3>
+
+<div class="container-fluid ">
+    <div class="d-flex justify-content-center">
+        <!--Carousel Wrapper-->
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+            <!--Controls-->
+            <div class="controls-top d-flex justify-content-center">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                        class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                        class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+            </div>
+            <!--/.Controls-->
+
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+            </ol>
+            <!--/.Indicators-->
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+                <!--First slide-->
+                <div class="carousel-item active">
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#"> <img class="img"
+                                                      src="{% static 'Ganapathi Raju.jpg' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Ganapathi Raju </h4>
+                                    <h6 class="category text-muted">Senior Visa Consultant.</h6>
+                                    <p class="card-description"> 20+ Years expereince in all types of USA
+                                        Visas. </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#"> <img class="img"
+                                                      src="{% static 'Laxmi.JPG' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">LAXMI DANDU </h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor to Usa,Canada and
+                                        Australia </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#"> <img class="img"
+                                                      src="{% static 'Neelima.jpeg' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Neelima</h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor based in USA </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#">
+                                        <img class="img"
+                                             src="{% static 'Alekhya.JPG' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Alekhya</h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor based in Australia and
+                                        canada </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--/.First slide-->
+
+                <!--Second slide-->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <img class="card-img-top mx-auto d-block"
+                                         src="{% static 'Jayasurya.jpg' %}"
+                                         alt="Card image cap">
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Jayasurya</h4>
+                                    <h6 class="category text-muted">Student Counslor</h6>
+                                    <p class="card-description">Expert Counslor in University Application
+                                        process </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#">
+                                        <img class="img"
+                                             src="{% static 'Alekhya.JPG' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Alekhya</h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor based in Australia and
+                                        canada </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#"> <img class="img"
+                                                      src="{% static 'Neelima.jpeg' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">Neelima</h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor based in USA </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-profile">
+                                <div class="card-avatar">
+                                    <a href="#"> <img class="img"
+                                                      src="{% static 'Laxmi.JPG' %}">
+                                    </a>
+                                </div>
+                                <div class="table">
+                                    <h4 class="card-caption">LAXMI DANDU </h4>
+                                    <h6 class="category text-muted">University Consultant</h6>
+                                    <p class="card-description"> Expert University Counselor to Usa,Canada and
+                                        Australia </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Second slide-->
+
+
+            </div>
+            <!--/.Slides-->
+
+        </div>
+        <!--/.Carousel Wrapper-->
+    </div>
+</div>
+
