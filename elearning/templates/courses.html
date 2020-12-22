@@ -1,0 +1,1940 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title> Courses </title>
+{% endblock %}
+
+{% block style %}
+    <style>
+
+
+        .card-footer {
+            background: transparent;
+            border-top: 0px;
+            align-self: inherit;
+        }
+
+
+        div [class^="col-"] {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .card {
+            transition: 0.5s;
+            height: 100%;
+        }
+
+        .card-title {
+            font-size: 15px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+
+        .card:hover {
+
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .card::before, .card::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scale3d(0, 0, 1);
+            transition: transform .3s ease-out 0s;
+            background: rgba(255, 255, 255, 0.1);
+            content: '';
+            pointer-events: none;
+        }
+
+        .card::before {
+            transform-origin: left top;
+        }
+
+        .card::after {
+            transform-origin: right bottom;
+        }
+
+        .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+            transform: scale3d(1, 1, 1);
+        }
+    </style>
+    <style>
+        a.active {
+            border-bottom: 2px solid #55c57a;
+
+        }
+
+        .nav-link {
+            color: rgb(110, 110, 110);
+        }
+
+        .nav-link:hover {
+            color: #55c57a
+        }
+
+        .nav-pills .nav-link.active {
+            color: black;
+            background-color: white;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+
+    </style>
+{% endblock %}
+
+{% block nav %}
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="background-color: #FFFFFF!important;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'logo/resized.png' %}" alt="logo" width="150px" style="max-width: 220px;">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="{% url 'courses' %}"
+                           style="border-bottom: none">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'consultancy' %}">Consultancy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'forum' %}">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'About Us' %}">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login/Register</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}
+{% block content %}
+    <style>
+
+
+        .container1 {
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.58);
+            border-radius: 16px;
+            margin-top: 50px;
+            margin-bottom: 50px
+        }
+
+        .card1 {
+            border: none
+        }
+
+        .profile img {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%
+        }
+
+        .second {
+            border-left: 2px dotted lightgrey;
+            border-right: 2px dotted lightgrey
+        }
+
+        @media only screen and (max-width: 600px) {
+            .second {
+                border: none;
+                border-top: 2px dotted lightgrey;
+                margin-top: 25px
+            }
+
+            .third {
+                border-top: 2px dotted lightgrey;
+                margin-top: 25px
+            }
+
+            .icon {
+                margin-top: 20px;
+                top: 0
+            }
+        }
+
+        .fa-quote-left:before {
+            font-size: 7px;
+            color: orangered;
+            position: relative;
+            bottom: 5px
+        }
+
+        .intro {
+            font-size: 11px;
+            margin-left: 13px;
+            position: relative;
+            bottom: 8px
+        }
+
+        .row {
+            padding-bottom: 53px
+        }
+
+        .company {
+            position: absolute;
+            bottom: -42px
+        }
+
+        .fa-amazon:before {
+            content: "\f270";
+            font-size: 23px
+        }
+
+        .icon {
+            margin-bottom: 15px;
+            position: relative;
+            bottom: 20px
+        }
+
+        .header {
+            padding-top: 35px;
+            padding-bottom: 50px
+        }
+    </style>
+       <style>
+        .carousel {
+            width: 1200px;
+        }
+    </style>
+    <style>
+        /* This css file is to over write bootstarp css
+---------------------------------------------------------------------- */
+
+
+        /*
+        Theme Name: Modern - Bootstrap 4 Cards
+        Theme URI: http://adamthemes.com/
+        Author: AdamThemes
+        Author URI: http://adamthemes.com/
+        Description: Modern - Bootstrap 4 Cards by AdamThemes
+        Version: 1.0
+        License: GNU General Public License v2 or later
+        License URI: http://www.gnu.org/licenses/gpl-2.0.html
+        Tags: card, cards, css3, modern, adamthemes, bootstrap, profile
+        *---------------------------------------------------------------------- */
+
+
+        /*----------------------------------------------------------------------
+        TABLE OF CONTENTS
+
+        // 1. SECTIONS
+        // 2. CARDS
+        //      2.1 Card Table
+        //      2.1 Card Blog
+        //      2.1 Card Background
+        //      2.1 Card Profile
+        //      2.1 Card Category
+        //      2.1 Card Author
+        //      2.1 Card Product
+        //      2.1 Card Testimonial
+        //      2.1 Text Color
+        // 3. BUTTONS
+        // 4. SOCIAL MEDIA BUTTONS
+        // 5. BOOTSTRAP COL-MD-12 CLASS
+        // 6. FONT AWESOME FA CLASS
+
+        ------------------------------------------------------------------------*/
+
+
+        /*---------------------------------------------------------------------- /
+        SECTIONS
+        ----------------------------------------------------------------------- */
+
+        .section-cards {
+            z-index: 3;
+            position: relative;
+        }
+
+        .section-gray {
+            background: #E5E5E5;
+            padding: 60px 0 30px 0;
+        }
+
+
+        /*---------------------------------------------------------------------- /
+        CARDS
+        ----------------------------------------------------------------------- */
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            color: rgba(0, 0, 0, 0.87);
+            background: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .card .card-image {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: -30px;
+            border-radius: 6px;
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .card-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+
+        .card .card-image .card-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            font-size: 1.3em;
+            text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-raised {
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .ftr {
+            margin-top: 15px;
+        }
+
+        .card .ftr div {
+            display: inline-block;
+        }
+
+        .card .ftr .author {
+            color: #888;
+        }
+
+        .card .ftr .stats {
+            float: right;
+            line-height: 30px;
+        }
+
+        .card .ftr .stats {
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+        }
+
+
+        /* ============ Card Table ============ */
+
+        .table {
+            margin-bottom: 0px;
+        }
+
+        .card .table {
+            padding: 15px 30px;
+        }
+
+        .card .table-primary {
+            background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+        }
+
+        .card .table-info {
+            background: linear-gradient(60deg, #26c6da, #0097a7);
+        }
+
+        .card .table-success {
+            background: linear-gradient(60deg, #66bb6a, #388e3c);
+        }
+
+        .card .table-warning {
+            background: linear-gradient(60deg, #ffa726, #f57c00);
+        }
+
+        .card .table-danger {
+            background: linear-gradient(60deg, #ef5350, #d32f2f);
+        }
+
+        .card .table-rose {
+            background: linear-gradient(60deg, #ec407a, #c2185b);
+        }
+
+        .card [class*="table-"] {
+            color: #FFFFFF;
+            border-radius: 6px;
+        }
+
+        .card [class*="table-"] .card-caption a,
+        .card [class*="table-"] .card-caption,
+        .card [class*="table-"] .icon i {
+            color: #FFFFFF;
+        }
+
+        .card [class*="table-"] .icon i {
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .card [class*="table-"] .author a,
+        .card [class*="table-"] .ftr .stats,
+        .card [class*="table-"] .category,
+        .card [class*="table-"] .card-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card [class*="table-"] .author a:hover,
+        .card [class*="table-"] .author a:focus,
+        .card [class*="table-"] .author a:active {
+            color: #FFFFFF;
+        }
+
+        .card [class*="table-"] h1 small,
+        .card [class*="table-"] h2 small,
+        .card [class*="table-"] h3 small {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+
+        /* ============ Card Blog ============ */
+
+        .card-blog {
+            margin-top: 30px;
+        }
+
+        .card-blog .card-caption {
+            margin-top: 5px;
+        }
+
+        .card-blog .card-image + .category {
+            margin-top: 20px;
+        }
+
+        .card-raised {
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* ============ Card Background ============ */
+
+        .card-background {
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .card-background .table {
+            position: relative;
+            z-index: 2;
+            min-height: 280px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .card-background .category,
+        .card-background .card-description,
+        .card-background small {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-background .card-caption {
+            color: #FFFFFF;
+            margin-top: 10px;
+        }
+
+        .card-background:after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0;
+            top: 0;
+            table: "";
+            background-color: rgba(0, 0, 0, 0.56);
+            border-radius: 6px;
+        }
+
+
+        /* ============ Card Profile ============ */
+
+        .card-profile {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+
+        /* ============ Card Category ============ */
+
+        .category {
+            position: relative;
+            line-height: 0;
+            margin: 15px 0;
+        }
+
+        .card .category-social .fa {
+            font-size: 24px;
+            position: relative;
+            margin-top: -4px;
+            top: 2px;
+            margin-right: 5px;
+        }
+
+
+        /* ============ Card Author ============ */
+
+        .card .author .avatar {
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .card .author a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .card .author a .ripple-cont {
+            display: none;
+        }
+
+
+        /* ============ Card Product ============ */
+
+        .card-product {
+            margin-top: 30px;
+        }
+
+        .card-product .btn-simple.btn-just-icon {
+            padding: 0;
+        }
+
+        .card-product .ftr {
+            margin-top: 5px;
+        }
+
+        .card-product .ftr .stats {
+            margin-top: 4px;
+            top: 0;
+        }
+
+        .card-product .ftr h4 {
+            margin-bottom: 0;
+        }
+
+        .card-product .card-caption,
+        .card-product .category,
+        .card-product .card-description {
+            text-align: center;
+        }
+
+        .card-description p {
+            color: #888;
+        }
+
+        .card-caption,
+        .card-caption a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .card-caption {
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+        }
+
+
+        /* ============ Card Testimonial ============ */
+
+        .card-testimonial {
+            margin-top: 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .card-profile .btn-just-icon.btn-raised,
+        .card-testimonial .btn-just-icon.btn-raised {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .card-profile .card-avatar,
+        .card-testimonial .card-avatar {
+            max-width: 130px;
+            max-height: 130px;
+            margin: -25px auto 0;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-profile.card-plain .card-avatar,
+        .card-testimonial.card-plain .card-avatar {
+            margin-top: 0;
+        }
+
+        .card-testimonial .card-avatar {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .card-testimonial .card-description {
+            font-style: italic;
+        }
+
+        .card-testimonial .card-description + .card-caption {
+            margin-top: 30px;
+        }
+
+        .card-testimonial .icon {
+            margin-top: 30px;
+        }
+
+        .card-testimonial .icon {
+            font-size: 40px;
+        }
+
+        .card-testimonial .ftr {
+            margin-top: 0;
+        }
+
+        .card-testimonial .ftr .card-avatar {
+            margin-top: 10px;
+            margin-bottom: -50px;
+        }
+
+
+        /* ============ Text Color ============ */
+
+        .text-warning {
+            color: #ff9800;
+        }
+
+        .text-primary {
+            color: #9c27b0;
+        }
+
+        .text-danger {
+            color: #f44336;
+        }
+
+        .text-success {
+            color: #4caf50;
+        }
+
+        .text-info {
+            color: #00bcd4;
+        }
+
+        .text-rose {
+            color: #e91e63;
+        }
+
+        .text-gray {
+            color: #888;
+        }
+
+        /*---------------------------------------------------------------------- /
+        SOCIAL MEDIA BUTTONS
+        ----------------------------------------------------------------------- */
+
+        /*---------------------------------------------------------------------- /
+        BOOTSTRAP COL-MD-12 CLASS
+        ----------------------------------------------------------------------- */
+
+        .col-md-12 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+
+        /*---------------------------------------------------------------------- /
+        FONT AWESOME FA CLASS
+        ----------------------------------------------------------------------- */
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /***********Only4Demo*******************/
+        /**************************************/
+
+        /* ======= GENERAL  ======= */
+
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        p {
+            color: #3C4857;
+        }
+
+        header {
+            border-bottom: 1px solid #dedede;
+            text-align: center;
+        }
+
+
+        h1, .h1 {
+            font-size: 3.8em;
+        }
+
+        h2, .h2 {
+            font-size: 2.0em;
+            line-height: 1.6em;
+            margin: 15px 0 15px;
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+            text-align: center;
+        }
+
+        h3, .h3 {
+            font-size: 1.825em;
+            line-height: 1.4em;
+            margin: 30px 0 30px;
+            font-weight: 700;
+            font-family: "Roboto Slab", "Times New Roman", serif;
+            text-align: center;
+        }
+
+        h4, .h4 {
+            font-size: 1.3em;
+            line-height: 1.55em;
+        }
+
+        h5, .h5 {
+            font-size: 1.25em;
+            line-height: 1.55em;
+            margin-bottom: 15px;
+        }
+
+        h6, .h6 {
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+    </style>
+    <div class="container " style="margin-bottom: 40px;margin-top: 40px">
+        <div class="row">
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center">
+                                <h3 style="color: #ff8e5e">GRE</h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 17,499</h5>
+                                <hr style="color: gray">
+                                <div class="container">
+
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Verbal Module – 16 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Analytical writing – 4 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Quant – 25 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        All Material Inclusive
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Vocabulary Online Course & App
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        10 Full length Mock tests
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        4-6 Weeks Duration (Mon-Sat)
+                                    </p>
+                                    <!-- <p style="color: gray"><i class="fas fa-check"></i>
+                                         offline & online
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         Full length tests
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         All materials included
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         1 year validity
+                                     </p>-->
+                                    <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                       <!-- <div class="card-footer" style="padding-top: 80px">
+
+                                            <div class=""
+                                                 style="position: absolute; bottom: 15px; width: 85%;">
+                                                <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#ff8e5e;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center">
+                                <h3 style="color: #ff8e5e">IELTS/TOEFL/PTE</h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 7,499</h5>
+                                <hr style="color: gray">
+                                <div class="container">
+
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Reading- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Writing- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Listening- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Speaking- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        All materials Inclusive
+                                    </p>
+                                    <!-- <p style="color: gray"><i class="fas fa-check"></i>
+                                         offline & online
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         Full length tests
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         All materials included
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         1 year validity
+                                     </p>-->
+                                    <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                        <!--<div class="card-footer" style="padding-top: 80px">
+
+                                            <div class=""
+                                                 style="position: absolute; bottom: 15px; width: 85%;">
+                                                <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center ;">
+                                <h3 style="color: #ff8e5e">Duo Lingo </h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 7,499</h5>
+                            </div>
+                            <hr style="color: gray">
+
+                            <div class="container" style="text-align: center ;float: left;">
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Reading- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Writing- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Listening- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Speaking- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    All materials Inclusive
+                                </p>
+                                <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                    <br>
+                                    <br>
+                                    <!--<div class="card-footer">
+
+                                        <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                            <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                               tabindex="-1"
+                                               role="button"
+                                               aria-disabled="true"
+                                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center ;">
+                                <h3 style="color: #ff8e5e">GRE + IELTS/TOEFL/PTE </h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 19,999</h5>
+                            </div>
+                            <hr style="color: gray">
+
+                            <div class="container" style="text-align: center ;float: left;">
+                                Speical price all courses included
+                                <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                    <br>
+                                    <br>
+                                   <!-- <div class="card-footer">
+
+                                        <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                            <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                               tabindex="-1"
+                                               role="button"
+                                               aria-disabled="true"
+                                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='container1 mx-auto mt-5 col-md-10 col-11'>
+        <div class="header text-muted"> What people are saying about our institute</div>
+        <div class="row" style="justify-content: center">
+            <div class="card1 col-md-3 col-11">
+                <div class="card-content">
+                    <div class="card-body p-0">
+                        <div class="profile mb-4 mt-3"><img
+                                src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583336/AAA/4.jpg"></div>
+                        <div class="card-subtitle">
+                            <p><small class="text-muted"> <i class="fas fa-quote-left"></i> I expected anything less
+                                than perfect for the team of experts. They are the best team ever! <i
+                                        class="fas fa-quote-left fa-flip-horizontal"></i> </small></p>
+                        </div>
+                        <div class="card-body company"><i class="fab fa-ebay fa-2x"></i> <small
+                                class="intro text-muted">Sam Diago, Marketer</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1 col-md-3 col-11 second">
+                <div class="card-content">
+                    <div class="card-body p-0">
+                        <div class="profile mb-4 mt-3"><img
+                                src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583319/AAA/3.jpg"></div>
+                        <div class="card-subtitle">
+                            <p><small class="text-muted"> <i class="fas fa-quote-left "></i> I really enjoyed working
+                                with them, they are Group of Professionals and they know what they're Doing <i
+                                        class="fas fa-quote-left fa-flip-horizontal"></i> </small></p>
+                        </div>
+                        <div class="card-body company"><i class="fab fa-amazon fa-2x"></i><small
+                                class="intro text-muted">Monty Jones, Software Developer</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1 col-md-3 col-11 third">
+                <div class="card-content">
+                    <div class="card-body p-0">
+                        <div class="profile mb-4 mt-3"><img
+                                src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg"></div>
+                        <div class="card-subtitle">
+                            <p><small class="text-muted"> <i class="fas fa-quote-left"></i> I always wanted cool videos
+                                of my concerts never knew whom to talk to but they are amazing! <i
+                                        class="fas fa-quote-left fa-flip-horizontal"></i> </small></p>
+                        </div>
+                        <div class="card-body company"><i class="fab fa-yelp fa-2x"></i><small class="intro text-muted">John
+                            Tim, Tech Support</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid ">
+        <div class="d-flex justify-content-center">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top d-flex justify-content-center">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                            class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                            class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Prasad Raju.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Raju </h4>
+                                        <h6 class="category text-muted"> Director </h6>
+                                        <br>
+                                        <p class="card-description"> MSC.University of connecticut USA,Phd </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Laxmi.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">LAXMI DANDU </h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> MSC. Computer Science experience in university
+                                            suggestions and Applications </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Neelima.jpeg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Neelima</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description">MBA Human Resources Experience in University
+                                            Guidance </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'Alekhya.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Alekhya</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <img class="card-img-top mx-auto d-block"
+                                             src="{% static 'Jayasurya.jpg' %}"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Jayasurya</h4>
+                                        <h6 class="category text-muted">Verbal & Quant Faculty </h6>
+                                        <br>
+                                        <p class="card-description">MSC.Entrepreneurship , Brown University </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'DSC6532copy.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Janaki M</h4>
+                                        <h6 class="category text-muted">Student counselor</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Prasad Ravi.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Ravi</h4>
+                                        <h6 class="category text-muted">Senior Verbal Faculty</h6>
+                                        <p class="card-description">MA Political Science ,20+years Experience in
+                                            teaching </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'RK Sir.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Krishna Reddy </h4>
+                                        <h6 class="category text-muted">Senior Math Faculty</h6>
+                                        <p class="card-description"> 15+ Year's Experience in teaching GRE,GMAT and CAT
+                                            Courses </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Second slide-->
+
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+
+
+{% endblock %}
+<div class="container-fluid">
+    <div class="container card shadow d-flex justify-content-center mt-5">
+        <!-- nav options -->
+        <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                   href="#pills-home"
+                   role="tab" aria-controls="pills-home" aria-selected="true">plan1</a></li>
+            <li class="nav-item"><a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">plan2</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+                                    role="tab" aria-controls="pills-contact" aria-selected="false">plan3</a></li>
+        </ul>
+        <!-- content -->
+        <div class="tab-content" id="pills-tabContent p-3">
+            <!-- 1st card -->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">GRE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 15,999</h5>
+                                        <hr style="color: gray">
+                                        <div class="container" style="">
+                                            <div class=" justify-content-center">
+                                                <p style="color: gray"><i class="fas fa-check"></i>
+                                                    4-6 weeks duration
+                                                </p>
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    22 verbal hours,25 math hours
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    All Material included
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    10 Full length tests
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    online accessibility
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    1 year validity
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more ->
+                                            </a>
+                                        </span>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+                                                    <a href="{% url 'payment' %}" class="btn mx-auto btn-lg "
+                                                       tabindex="-1"
+                                                       role="button"
+                                                       aria-disabled="true"
+                                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">IELTS/TOEFL/PTE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 5,999</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                4 Weeks duration
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Listening 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                speaking 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                writing 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Reading 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                offline & online
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Full length tests
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                All materials included
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                1 year validity
+                                            </p>
+                                            <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                                <div class="card-footer" style="padding-top: 80px">
+
+                                                    <div class=""
+                                                         style="position: absolute; bottom: 15px; width: 85%;">
+                                                        <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                           tabindex="-1"
+                                                           role="button"
+                                                           aria-disabled="true"
+                                                           style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center ;">
+                                        <h3 style="color: #F2594B">GRE + IELTS/TOEFL/PTE </h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 19,999</h5>
+                                    </div>
+                                    <hr style="color: gray">
+
+                                    <div class="container" style="text-align: center ;float: left;">
+                                        Speical price all courses included
+                                        <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                                    <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                                       tabindex="-1"
+                                                       role="button"
+                                                       aria-disabled="true"
+                                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 2nd card -->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">GRE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 10,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                Gradutae Reward Exam(GRE), is a test written by Prospective Graduate
+                                                students,
+                                                applying for Master's courses in multiple Universities across USA,
+                                                Canada,
+                                                and other European countries.
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                If you're looking to study Graduate courses (Masters or MBA) in top
+                                                Universities
+                                                across the world, submitting GRE scores is a mandatory requirement.
+                                                Universities
+                                                take GRE Scores to be a common indicator of a student's Analytical,
+                                                Logical, and
+                                                Verbal Reasoning Skills. This test, conducted by a non-profit
+                                                educational
+                                                assessment and research organization called ETS, was designed to
+                                                reflect
+                                                a
+                                                student's critcal thinking abilities.
+
+                                            </p>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">TOFEL</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 5,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                Test of English as a Foreign Langugae(TOEFL), is a computer based
+                                                english
+                                                language test which tests a student's English Reading, Writing,
+                                                Listening, and
+                                                Speaking skills.
+
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                For almost every foreign University where courses are taught in
+                                                Engllish, it's
+                                                mandatory for a student whose native language is not English, to
+                                                submit
+                                                minimum
+                                                scores in a certified English language test. TOEFL is one of the
+                                                three
+                                                popular
+                                                tests, the other two being IELTS and PTE.
+
+                                            </p>
+
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 3nd card -->
+            <div class="tab-pane fade third" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row">
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">IELTS</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 3,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                The International English Language Testing System(IELTS), is a paper
+                                                based test
+                                                designed to assess Test Taker's English communnication skills in
+                                                Reading,
+                                                Writing, Listening and Speaking tasks. The Exam is scored out of 9
+                                                Bands, to
+                                                measure the level of proficiency in English. Band score 1 is
+                                                attributed
+                                                as
+                                                Non-Speaker and 9 as Expert.
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                There are two types in the IELTS- General and Academic. Test takers
+                                                who
+                                                are
+                                                applying to Universities are required to write Academic version,
+                                                where
+                                                as those
+                                                who are migrating for work need to write the General Version.
+
+                                            </p>
+
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">PTE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 4,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                The Pearson Test for English, is generally take by Non-native
+                                                English
+                                                speakers
+                                                to prove their Reading, Writing, Listening and Speaking skills, to
+                                                the
+                                                Universities where courses are taught in the English Language. PTE
+                                                is an
+                                                Online
+                                                based Test
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                To complete a PTE Academic test, you will need to attend a secure
+                                                Pearson test
+                                                center. You will use a computer and headset to listen to, read, and
+                                                respond to
+                                                questions. During the three-hour test session there will be three
+                                                main
+                                                parts to
+                                                the test: speaking and writing (together), listening and reading.
+                                            </p>
+
+                                            <br>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="
+                                    {% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body d-flex flex-column">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">GRE</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 10,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    Gradutae Reward Exam(GRE), is a test written by Prospective Graduate students,
+                                    applying for Master's courses in multiple Universities across USA, Canada,
+                                    and other European countries.
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    If you're looking to study Graduate courses (Masters or MBA) in top Universities
+                                    across the world, submitting GRE scores is a mandatory requirement. Universities
+                                    take GRE Scores to be a common indicator of a student's Analytical, Logical, and
+                                    Verbal Reasoning Skills. This test, conducted by a non-profit educational
+                                    assessment and research organization called ETS, was designed to reflect a
+                                    student's critcal thinking abilities.
+
+                                </p>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">TOFEL</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 5,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    Test of English as a Foreign Langugae(TOEFL), is a computer based english
+                                    language test which tests a student's English Reading, Writing, Listening, and
+                                    Speaking skills.
+
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    For almost every foreign University where courses are taught in Engllish, it's
+                                    mandatory for a student whose native language is not English, to submit minimum
+                                    scores in a certified English language test. TOEFL is one of the three popular
+                                    tests, the other two being IELTS and PTE.
+
+                                </p>
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">IELTS</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 3,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    The International English Language Testing System(IELTS), is a paper based test
+                                    designed to assess Test Taker's English communnication skills in Reading,
+                                    Writing, Listening and Speaking tasks. The Exam is scored out of 9 Bands, to
+                                    measure the level of proficiency in English. Band score 1 is attributed as
+                                    Non-Speaker and 9 as Expert.
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    There are two types in the IELTS- General and Academic. Test takers who are
+                                    applying to Universities are required to write Academic version, where as those
+                                    who are migrating for work need to write the General Version.
+
+                                </p>
+
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">PTE</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 4,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    The Pearson Test for English, is generally take by Non-native English speakers
+                                    to prove their Reading, Writing, Listening and Speaking skills, to the
+                                    Universities where courses are taught in the English Language. PTE is an Online
+                                    based Test
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    To complete a PTE Academic test, you will need to attend a secure Pearson test
+                                    center. You will use a computer and headset to listen to, read, and respond to
+                                    questions. During the three-hour test session there will be three main parts to
+                                    the test: speaking and writing (together), listening and reading.
+                                </p>
+
+                                <br>
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="
+                                    {% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--<div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
