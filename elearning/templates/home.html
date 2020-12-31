@@ -245,8 +245,6 @@
 
 {% endblock %}
 
-
-
 {% block content %}
 
     <div style="padding-top: 40px" class="container-fluid">
@@ -272,7 +270,7 @@
             <div class="col-sm order-2 order-lg-1" style="margin-top: 70px">
 
                 <h2 style="color: #6088c0">What do we offer?</h2>
-                <h4 style="margin-top: 60px;color: #304460">Coaching for -</h4>
+                <h4 style="margin-top: 60px;"><b>Coaching for -</b></h4>
                 <h5 style="color: #ff8e5e">GRE| IELTS | TOEFL | SAT | PTE | Duo Lingo</h5>
                 <p>(Online and Offline classes) </p>
 
@@ -317,7 +315,7 @@
     -->
     <div class="container" style="padding-top: 100px">
         <div style="float: left">
-            <h2><b>Facts & Figures </b></h2>
+            <h2 style="color: #6088c0"><b>Facts & Figures </b></h2>
         </div>
         <div class="row d-flex  overflow-auto">
             <!--<div class="row d-flex flex-row flex-nowrap overflow-auto">-->
@@ -374,7 +372,7 @@
     <div class="container" style="padding-top: 15px">
         <div>
             <div style="float: left">
-                <h2><b>Register for Courses </b></h2>
+                <h2 style="color: #6088c0"><b>Register for Courses </b></h2>
             </div>
             <div style="float: right;padding-right: 78px;padding-top: 30px">
                 <a href="{% url 'courses' %}"
@@ -487,14 +485,12 @@
 
         </div>
     </div>
-
-
     <div style="padding-top: 100px" class="container-fluid">
         <div style="background-color: #f7f7f7;" class="container-fluid">
             <div class=" container overflow-hidden">
                 <div class="row">
                     <div class="col-sm-5 " style="padding-top: 70px;">
-                        <h3>Find your Course that making your bright future</h3>
+                        <h3 style="color: #6088c0">Find your Course that making your bright future</h3>
                         <p>
                             Every student who consults us, comes with a purpose of finding better Education, Economic
                             realization,
@@ -506,7 +502,7 @@
                         <div class="d-flex justify-content-center " style="padding-top: 10px">
                             <a href="{% url 'courses' %}" class="btn btn-md " tabindex="-1" role="button"
                                aria-disabled="true"
-                               style="background: #6088c0!important;color: #ffffff!important;align-items: center">Know
+                               style="background: #ff8e5e!important;color: #F2F2F2!important;">Know
                                 more
                             </a>
                         </div>
@@ -527,7 +523,7 @@
 
     <div class="container" style="padding-top: 100px">
         <div style="text-align: center">
-            <h2><b>University Application Guidance</b></h2><div class="d-lg-none "><i class="fas fa-angle-double-right" style="font-size: 40px"></i><span style="font-size: 30px">swipe</span></div>
+            <h2 style="color: #6088c0"><b>University Application Guidance</b></h2><div class="d-lg-none "><i class="fas fa-angle-double-right" style="font-size: 40px"></i><span style="font-size: 30px">swipe</span></div>
 
             <div class="row d-flex flex-row flex-nowrap overflow-auto">
                 <div class="col-sm">
@@ -582,7 +578,7 @@
                     <div class="col-sm-5" style="margin-top: 60px;margin-bottom: 20px">
                         <div class="container">
                             <div class=" text">
-                                <h4 class="font-weight-bold">Get guidance in-</h4>
+                                <h4 class="font-weight-bold" style="color: #6088c0">Get guidance in-</h4>
                                 <h5>University Short Listing</h5>
                                 <h5>Applications Filling</h5>
                                 <h5>Personal Essays and Recommendation letters </h5>
@@ -592,7 +588,7 @@
                             <div style="">
                                 <a href="{% url 'courses' %}" class="btn btn-md " tabindex="-1" role="button"
                                    aria-disabled="true"
-                                   style="background: #6088c0!important;color: #ffffff!important;margin-top: 40px">
+                                   style="background: #ff8e5e!important;color: #F2F2F2!important;">
                                     Know more
                                 </a>
                             </div>
@@ -602,13 +598,21 @@
             </div>
         </div>
     </div>
-
-
     <div class="container" style="padding-top: 100px">
-        <h2 style="text-align: center">Reviews</h2>
+        <h2 style="text-align: center;color: #6088c0">Reviews</h2>
         <div class="justify-content-center">
-            <img src="{% static 'home/Reviews Banner.png' %}" class="img-fluid rounded mx-auto d-block"
-                 alt="Responsive image" style="height: 200px;width:auto">
+            <div class="row">
+                <div class="col-sm col-md" >
+                    <img src="{% static 'home/1.png' %}" class="img-fluid rounded mx-auto d-block"
+                 alt="Responsive image" >
+                </div>
+                <div class="col-sm col-md">
+                    <img src="{% static 'home/2.png' %}" class="img-fluid rounded mx-auto d-block"
+                 alt="Responsive image" >
+                </div>
+
+            </div>
+
         </div>
         <!-- <div class="row">
             <div class="col-6">
@@ -623,11 +627,11 @@
         </div>-->
     </div>
 
-    <div class="container-fluid" style="padding-top: 100px">
+    <div class="container-fluid" style="padding-top: 100px;padding-bottom: 10px">
         <div class="containers h-100">
             <div class="row align-items-center h-100">
                 <div class="container rounded">
-                    <h2 class="text-center">Our Admits:</h2>
+                    <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
                     <section class="customer-logos slider">
                         <div class="slide"><img src="{% static 'usc.png' %}" alt="image-responsive"
                                                 style="width: 95px;height: 95px"/></div>
@@ -680,8 +684,6 @@
         </div>
     </div>
 
-    <br>
-    <br>
 
 {% endblock %}
 
