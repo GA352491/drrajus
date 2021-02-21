@@ -9,20 +9,23 @@ from datetime import date
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.core.paginator import Paginator, Page, PageNotAnInteger, EmptyPage
+
+from .forms import PostForm
 
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home/home.html')
 
 
 def courses(request):
-    return render(request, 'courses.html')
+    return render(request, 'courses/courses.html')
 
 
 def consultancy(request):
-    return render(request, 'Application Guidance.html')
+    return render(request, 'application_guidance/Application_Guidance.html')
 
 
 def contact(request):
@@ -34,7 +37,7 @@ def forum(request):
 
 
 def about_us(request):
-    return render(request, 'About us.html')
+    return render(request, 'about_us/About_us.html')
 
 
 @login_required(login_url='login')
@@ -137,3 +140,37 @@ def terms(request):
 
 def privacy(request):
     return render(request, 'privacy policy.html')
+
+
+def blog(request):
+    form = PostForm()
+    blogs = Blog.objects.all()
+    paginator = Paginator(blogs, per_page=4)
+    page_request_var = 'page'
+    page = request.GET.get(page_request_var)
+    try:
+        paginated_query_set = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_query_set = paginator.page(1)
+    except EmptyPage:
+        paginated_query_set = paginator.page(paginator.num_pages)
+
+    context = {'queryset': paginated_query_set, 'page_request_var': page_request_var, 'blogs': blogs, 'form': form}
+    return render(request, 'blogs/blog.html', context)
+
+
+def blog_view(request, pk):
+    post = Blog.objects.get(id=pk)
+    form = PostForm()
+    context = {'post': post, 'form': form}
+    return render(request, 'blogs/blog_view.html', context)
+
+
+def content(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            a = form.save(commit=False)
+            print(a.content)
+
+    return redirect('blog')
