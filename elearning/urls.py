@@ -15,4 +15,7 @@ urlpatterns = [
     path('success/', views.success, name='success'),
     path('terms/', views.terms, name='terms'),
     path('privacy/', views.privacy, name='privacy'),
+    path('blog/', views.blog, name='blog'),
+    path('blog_view/<pk>', views.blog_view, name='blog_view'),
+    path('content', views.content, name='content'),
 ]
