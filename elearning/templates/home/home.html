@@ -1,0 +1,1054 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title> E-Learning </title>
+{% endblock %}
+
+{% block style %}
+    {% include 'home/home_css.html' %}
+{% endblock %}
+
+{% block nav %}
+    {% include 'snippets/navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+    <div style="padding-top: 40px" class="container-fluid">
+        <div style="padding-bottom: 30px;padding-top:30px ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 order-2  order-lg-2" style="margin-top: 80px;">
+                        <h2 style="color: #6088c0">Who we are?</h2>
+                        <h4 style=""> Established in 2006, we have coached and guided thousands of students to top
+                            foreign
+                            Universities around the world.
+                        </h4>
+                    </div>
+                    <div class="col-sm-6 order-1 order-lg-1">
+                        <img src="{% static 'home/8294.jpg' %}" class="img-fluid"
+                             alt="Responsive image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm order-2 order-lg-1" style="margin-top: 70px">
+
+                <h2 style="color: #6088c0">What do we offer?</h2>
+
+
+                <h4 style="margin-top: 40px"><b style="">University Application Services -</b></h4>
+
+                <h5 style="color: #ff8e5e">USA| Canada| UK | Australia | Europe</h5>
+                <p><span><a href="{% url 'consultancy' %}"
+                            style="color: #4c6c99!important; ">Know more
+                </a></span></p>
+
+
+                <h4 style="margin-top: 60px;"><b>Coaching for -</b></h4>
+                <h5 style="color: #ff8e5e">GRE| IELTS | TOEFL | SAT | PTE | Duo Lingo</h5>
+                <p>(Online and Offline classes) </p>
+                <p><span><a href="{% url 'courses' %}"
+                            style="color: #4c6c99!important; ">Know more
+                </a></span></p>
+
+
+                <br>
+                <a href="tel:+91 9908222209" class="btn btn-md " tabindex="-1" role="button" aria-disabled="true"
+                   style="background: #ff8e5e!important;color: #F2F2F2!important;"><i class="fas fa-phone-alt"></i> Call
+                </a><span>  For further details</span>
+
+            </div>
+
+            <div class="col-sm order-1  order-lg-2 " style="margin-top: 30px">
+                <img src="{% static 'vectors/Studying Concept Illustration.svg' %}"
+                     class="img-fluid"
+                     alt="Responsive image">
+
+
+            </div>
+
+        </div>
+    </div>
+    <!--
+    <ul class="nav justify-content-center">
+
+        <li class="nav-item">
+            <a class="nav-link " href="https://www.facebook.com/DrrajusMsinUS/" style="color: #3b5998 !important;"><i
+                    class="fab fa-facebook-square"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #fb3958!important;"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #0e76a8 !important;"><i class="fab fa-linkedin"></i></a>
+        </li>
+
+
+    </ul>
+    -->
+    <div class="container" style="padding-top: 100px">
+        <div style="float: left">
+            <h2 style="color: #6088c0"><b>Facts & Figures </b></h2>
+        </div>
+        <div class="row d-flex  overflow-auto">
+            <!--<div class="row d-flex flex-row flex-nowrap overflow-auto">-->
+            <div class="col col-sm-6 col-12">
+                <div class="d-flex" style="border: none">
+                    <div>
+                        <div class="card shadow"
+                             style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
+                            <div class="card-body">
+
+                                <i class="fas fa-user-graduate "
+                                   style="font-size: 60px;color: #6088c0!important;">
+
+                                </i>
+                            </div>
+                        </div>
+                        <div style="float: right;padding-top: 20px;padding-left: 20px">
+                            <h3>20,000<span style="font-size: 20px">
+                                <i class="fas fa-plus"></i></span>
+                            </h3>
+                            <span style="color: #ff8e5e">Students coached  </span>
+                        </div>
+                    </div>
+                    <!-- <div class="media-body" style="float: right">
+                         <h3>20000<span style="color:#048ABF!important;"><i
+                                 class="fas fa-long-arrow-alt-up"></i></span>
+                         </h3>
+                         <span>Students</span>
+                     </div>-->
+                </div>
+            </div>
+            <div class="col col-sm-6 col-12">
+                <div class="d-flex" style="border: none">
+                    <div>
+                        <div class="card shadow"
+                             style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
+                            <div class="card-body">
+                                <i class="fas fa-university float-left"
+                                   style="font-size: 60px;color: #6088c0!important;"></i>
+                            </div>
+                        </div>
+                        <div style="float: right;padding-top: 20px;padding-left: 20px">
+                            <h3>10,000<span style="font-size: 20px">
+                                <i class="fas fa-plus"></i></span>
+                            </h3>
+                            <span style="color: #ff8e5e">University Applications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<div style="padding-top: 100px" class="container-fluid">
+        <div style="background-color: #f7f7f7;" class="container-fluid">
+            <div class=" container overflow-hidden">
+                <div class="row">
+                    <div class="col-sm-5 " style="padding-top: 70px;">
+                        <h3 style="color: #6088c0">Find your Course that making your bright future</h3>
+                        <p>
+                            Every student who consults us, comes with a purpose of finding better Education, Economic
+                            realization,
+                            and Skill development. We keep this purpose at the fore-front of our decision making,
+                            through out the
+                            process of Coaching and University guidance.
+                        </p>
+
+                        <div class="d-flex justify-content-center " style="padding-top: 10px">
+                            <a href="{% url 'courses' %}" class="btn btn-md " tabindex="-1" role="button"
+                               aria-disabled="true"
+                               style="background: #ff8e5e!important;color: #F2F2F2!important;">Know
+                                more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-7" style="margin-top: 70px;margin-bottom: 70px">
+                        <div class="embed-responsive embed-responsive-16by9">
+
+                            <iframe class="embed-responsive-item" width="600px" height="450px" align="right"
+                                    src="https://www.youtube.com/embed/AhZgalyrzCg"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen style="border-radius: 15px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="container" style="padding-top: 100px">
+        <div style="text-align: center">
+            <h2 style="color: #6088c0"><b>University Application Guidance</b></h2>
+            <div class="d-lg-none "><i class="fas fa-angle-double-right" style="font-size: 40px"></i><span
+                    style="font-size: 30px">swipe</span></div>
+
+            <div class="row d-flex flex-row flex-nowrap overflow-auto">
+                <div class="col-sm">
+                    <img src="{% static 'country/USA.png' %}" class="img-fluid"
+                         alt="Responsive image" style="height: 100px">
+                    <div>
+                        <span style="text-align: center">USA</span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="{% static 'country/UK.png' %}" class="img-fluid"
+                         alt="Responsive image" style="height: 100px">
+                    <div>
+                        <span style="text-align: center">UK</span>
+                    </div>
+
+                </div>
+                <div class="col-sm">
+                    <img src="{% static 'country/canada.jpg' %}" class="img-fluid"
+                         alt="Responsive image" style="height: 100px">
+
+                    <div>
+                        <span style="text-align: center">Canada</span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="{% static 'country/Europe.png' %}" class="img-fluid"
+                         alt="Responsive image" style="height: 100px;width:200px ">
+                    <div>
+                        <span style="text-align: center">Europe</span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="{% static 'country/AUS.png' %}" class="img-fluid"
+                         alt="Responsive image" style="height: 100px">
+                    <div>
+                        <span style="text-align: center">Australia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container">
+                            <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
+
+            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col">
+                    <div class="p-3  ">
+                        <img src="{% static 'University_Logos/Brown_Logo.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Calgary.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/CaseWesternReserve.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/CMU.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Columbia.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Cornell_logo.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Dartmouth.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/DukeUniversity.jpeg' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Georgia Tech.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Grenoble.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Indiana_University.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Johns_Hopkins.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Maryland.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/McGill University.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/MIT_LOGO.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/NCSU.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <img src="{% static 'University_Logos/Northwestern University.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/NYU_Stern.jpeg' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/OhioStateUniversity.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/PennState.png' %}" alt="image-responsive"
+                             style="width: 95px;height: 95px"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="padding-top: 100px;margin-bottom: 30px">
+        <div style="background-color: #f7f7f7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7" style="margin-top: 60px;">
+                        <img src="{% static 'vectors/Screenshot 2020-11-06 at 5.52.22 PM.png' %}" class="img-fluid"
+                             alt="Responsive image" style="height: 450px;width: auto">
+                    </div>
+                    <div class="col-sm-5" style="margin-top: 60px;margin-bottom: 20px">
+                        <div class="container">
+                            <div class=" text">
+                                <h4 class="font-weight-bold" style="color: #6088c0">Get guidance in-</h4>
+                                <h5>University Short Listing</h5>
+                                <h5>Applications Filling</h5>
+                                <h5>Personal Essays and Recommendation letters </h5>
+                                <h5>Finding good Education Loan deals </h5>
+                                <h5>Visa filing and Documentation </h5>
+                            </div>
+                            <div style="">
+                                <a href="{% url 'courses' %}" class="btn btn-md " tabindex="-1" role="button"
+                                   aria-disabled="true"
+                                   style="background: #ff8e5e!important;color: #F2F2F2!important;">
+                                    Know more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-top: 100px">
+        <h2 style="text-align: center;color: #6088c0">Reviews</h2>
+        <div class="justify-content-center">
+            <div class="row">
+                <div class="col-sm col-md">
+                    <img src="{% static 'home/1.png' %}" class="img-fluid rounded mx-auto d-block"
+                         alt="Responsive image">
+                </div>
+                <div class="col-sm col-md">
+                    <img src="{% static 'home/2.png' %}" class="img-fluid rounded mx-auto d-block"
+                         alt="Responsive image">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-6">
+                <img src="{% static 'google_reviews.png' %}" class="img-fluid"
+                     alt="Responsive image">
+            </div>
+            <div class="col-6">
+                <img src="{% static 'google_reviews.png' %}" class="img-fluid"
+                     alt="Responsive image">
+
+            </div>
+        </div>-->
+    </div>
+
+    <!--<div class="container-fluid" style="padding-top: 100px;padding-bottom: 10px">
+        <div class="containers h-100">
+            <div class="row align-items-center h-100">
+                <div class="container rounded">
+                    <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
+                    <section class="customer-logos slider">
+                        <div class="slide"><img src="{% static 'usc.png' %}" alt="image-responsive"
+                                                style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img src="{% static 'Brown_University_Logo_full-700x806.png' %}"
+                                                alt="image-responsive"
+                                                style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img
+                                src="{% static 'duke-university-opinion-and-analysis-medium-duke-university-logo-png-320_320.png' %}"
+                                alt="image-responsive" style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img src="{% static 'husky-logo-lockup-circleR.jpg' %}"
+                                                alt="image-responsive"
+                                                style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img src="{% static 'Purdue-University-logo-vector-01.svg' %}"
+                                                alt="image-responsive"
+                                                style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img src="{% static 'tam-stack.png' %}" alt="image-responsive"
+                                                style="width: 95px;height: 95px"/></div>
+                        <div class="slide"><img
+                                src="{% static 'ucla-logo-png-picture-739283-ucla-logo-png-ucla-college-logo-png-998_998.png' %}"
+                                alt="image-responsive" style="width: 95px;height: 95px"/></div>
+
+                    </section>
+                    <script>
+                        $(document).ready(function () {
+                            $('.customer-logos').slick({
+                                slidesToShow: 6,
+                                slidesToScroll: 1,
+                                autoplay: true,
+                                autoplaySpeed: 1500,
+                                arrows: false,
+                                dots: false,
+                                pauseOnHover: false,
+                                responsive: [{
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 4
+                                    }
+                                }, {
+                                    breakpoint: 520,
+                                    settings: {
+                                        slidesToShow: 3
+                                    }
+                                }]
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+
+
+{% endblock %}
+
+
+https://www.behance.net/gallery/99597805/Online-Education-Landing-Page?tracking_source=search_projects_recommended%7Ce%20learning
+https://www.behance.net/gallery/104568931/Online-Education-Website-Design?tracking_source=search_projects_recommended%7Ce%20learning%20
+https://www.color-hex.com/color/6088c0
+
+<div class="container">
+    <h2>LATEST BLOGS </h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="img-box"><img src="{% static 'masters-degree.jpg' %}" alt=""
+                ></div>
+                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
+                    Etiam
+                    faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus
+                    risus,
+                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                <p class="overview"><b>Michael Holz</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
+
+            </div>
+            <div class="carousel-item">
+                <div class="img-box"><img src="{% static 'Topuniversities.jpeg' %}" alt="img-responsive"></div>
+                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
+                    tempor,
+                    varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada
+                    ante.
+                    Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non
+                    aliquet.</p>
+                <p class="overview"><b>Paula Wilson</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
+
+            </div>
+            <div class="carousel-item">
+                <div class="img-box"><img src="{% static 'toeflblog.jpg' %}" alt="img-responsive"></div>
+                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi
+                    a mi
+                    suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis.
+                    Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor
+                    velit.</p>
+                <p class="overview"><b>Antonio Moreno</b>Web Developer at <a href="#">Circle Ltd.</a></p>
+
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+
+    </div>
+</div>
+
+
+<div class="col-sm">
+    <div class="card" style="border: none">
+        <div class="card-content">
+            <div class="card-body">
+                <!--<div class="media">
+                    <div style="float: left">
+                        <h4>TOFEL</h4>
+                    </div>
+                    <div style="text-align: right">
+                        <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
+                                class="fas fa-long-arrow-alt-right"></i></span></a>
+
+                    </div>
+                </div>-->
+                <div class="d-flex justify-content-center">
+                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h5>TOFEL</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm">
+    <div class="card" style="border: none">
+        <div class="card-content">
+            <div class="card-body">
+                <!--<div class="media">
+                    <div style="float: left">
+                        <h4>IELTS</h4>
+                    </div>
+                    <div style="text-align: right">
+                        <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
+                                class="fas fa-long-arrow-alt-right"></i></span></a>
+
+                    </div>
+                </div>-->
+                <div class="d-flex justify-content-center">
+                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h5>IELTS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm">
+    <div class="card" style="border: none">
+        <div class="card-content">
+            <div class="card-body">
+                <!-- <div class="media">
+
+
+                     <div style="float: left">
+                         <h4>PTE</h4>
+
+                     </div>
+                     <div style="text-align: right">
+                         <a href="#" style="text-decoration: none;color: #92A99E"  ><span>Track <i class="fas fa-long-arrow-alt-right"></i></span></a>
+
+                     </div>
+                 </div>-->
+                <div class="d-flex justify-content-center">
+                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h5>PTE</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm">
+    <div class="card" style="border: none">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="d-flex justify-content-center">
+                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h5>DUO LINGO</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div style="float: left">
+        <h2><b>Facts & Figures </b></h2>
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="d-flex" style="border: none">
+                <div>
+                    <div class="card shadow"
+                         style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
+                        <div class="card-body">
+
+                            <i class="fas fa-user-graduate "
+                               style="font-size: 60px;color: #6088c0!important;">
+
+                            </i>
+                        </div>
+                    </div>
+                    <div style="float: right;padding-top: 20px;padding-left: 20px">
+                        <h3>20000<span style="color:#048ABF!important;"><i
+                                class="fas fa-long-arrow-alt-up"></i></span>
+                        </h3>
+                        <span>Students</span>
+                    </div>
+                </div>
+                <!-- <div class="media-body" style="float: right">
+                     <h3>20000<span style="color:#048ABF!important;"><i
+                             class="fas fa-long-arrow-alt-up"></i></span>
+                     </h3>
+                     <span>Students</span>
+                 </div>-->
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div>
+                            <div>
+                                <i class="fas fa-university float-left"
+                                   style="font-size: 60px;color: #6088c0!important;"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <h3>4000<span style="color:#048ABF!important;"><i
+                                        class="fas fa-long-arrow-alt-up"></i></span>
+                                </h3>
+                                <span>University Applications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div>
+                            <div>
+                                <i class="fas fa-passport float-left"
+                                   style="font-size: 60px;color: #6088c0!important;"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <h3>3500<span style="color:#048ABF!important;"><i
+                                        class="fas fa-long-arrow-alt-up"></i></span>
+                                </h3>
+                                <span>Approved Visa's</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div>
+                            <div>
+                                <i class="fas fa-globe float-left"
+                                   style="font-size: 60px;color: #6088c0!important;"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <h3>4<span style="color:#048ABF!important;"><i
+                                        class="fas fa-long-arrow-alt-up"></i></span></h3>
+                                <span>Countries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container-fluid" style="padding-top: 100px">
+    <div class="team-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">What our Students Say ? </h2>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
+                        <h3 class="name">Charishma Ponugoti</h3>
+                        <p class="title">University Of Souther California, 2017</p>
+                        <p class="description">It makes use of one of the best techniques to make a student
+                            understand
+                            the concepts necessary to ace the GRE test. I personally liked the supporting
+                            materials
+                            for
+                            verbal, and Quant material was exhaustive. The educators were very patient when i
+                            had
+                            doubts. This is probably another striking feature of their institution, to have an
+                            explicit
+                            time for doubts too. This encouraged me to solve more questions and prepare myself
+                            better
+                            for the upcoming battle. I would suggest Dr.Raju's for coaching anyday !! </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
+                                href="#"><i
+                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
+                        <h3 class="name">Madhavi Latha</h3>
+                        <p class="title">Student</p>
+                        <p class="description">It was very good. They have helped from the beginning and I was
+                            able
+                            to
+                            score good marks and got admit in a good university. It was possible because of
+                            their
+                            guidence. Thank you!
+
+                            . </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
+                                href="#"><i
+                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
+                        <h3 class="name">Likitha Srininvas</h3>
+                        <p class="title">Student</p>
+                        <p class="description">It was very good. They have helped from the beginning and I was
+                            able
+                            to
+                            score good marks and got admit in a good university. It was possible because of
+                            their
+                            guidence. Thank you!
+
+                            . </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
+                                href="#"><i
+                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .team-boxed {
+        color: #313437;
+    }
+
+    .team-boxed p {
+        color: #7d8285;
+    }
+
+    .team-boxed h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: inherit;
+    }
+
+    @media (max-width: 767px) {
+        .team-boxed h2 {
+            margin-bottom: 25px;
+            padding-top: 25px;
+            font-size: 24px;
+        }
+    }
+
+    .team-boxed .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .team-boxed .intro p {
+        margin-bottom: 0;
+    }
+
+    .team-boxed .people {
+        padding: 50px 0;
+    }
+
+    .team-boxed .item {
+        text-align: center;
+    }
+
+    .team-boxed .item .box {
+        text-align: center;
+        padding: 30px;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+
+    .team-boxed .item .name {
+        font-weight: bold;
+        margin-top: 28px;
+        margin-bottom: 8px;
+        color: inherit;
+    }
+
+    .team-boxed .item .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #d0d0d0;
+        letter-spacing: 2px;
+        font-size: 13px;
+    }
+
+    .team-boxed .item .description {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .team-boxed .item img {
+        max-width: 160px;
+    }
+
+    .team-boxed .social {
+        font-size: 18px;
+        color: #a2a8ae;
+    }
+
+    .team-boxed .social a {
+        color: inherit;
+        margin: 0 10px;
+        display: inline-block;
+        opacity: 0.7;
+    }
+
+    .team-boxed .social a:hover {
+        opacity: 1;
+    }
+
+
+</style>
+
+<style>
+    .containers {
+        overflow: hidden;
+    }
+
+    .slider {
+        animation: slidein 30s linear infinite;
+        white-space: nowrap;
+
+    }
+
+    .logos {
+        width: 100%;
+        display: inline-block;
+        margin: 0px 0;
+    }
+
+    .fab {
+        width: calc(100% / 5);
+        animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+
+
+    @keyframes slidein {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+        to {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+</style>
+
+<div class="container" style="padding-top: 15px">
+    <div>
+        <div style="float: left">
+            <h2 style="color: #6088c0"><b>Register for Courses </b></h2>
+        </div>
+        <div style="float: right;padding-right: 78px;padding-top: 30px">
+            <a href="{% url 'courses' %}"
+               style="color: #4c6c99!important;text-decoration:none ">Know more
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="row d-flex flex-row flex-nowrap overflow-auto ">
+
+
+            <div class="col">
+                <div class="card "
+                     style="width: 150px;  border-radius: 15px;background-color: #eff3f8;padding-bottom: 22px">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <!--<div class="media">
+                                <div style="float: left">
+                                    <h4>GRE</h4>
+                                </div>
+                                <div style="text-align: right">
+                                    <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
+                                            class="fas fa-long-arrow-alt-right"></i></span></a>
+
+                                </div>
+
+                            </div>-->
+                            <div style="text-align: center;font-size: 60px">
+                                <i class="fas fa-book-open" style="color: #6088c0"></i>
+
+                            </div>
+                            <div style="text-align: center">
+                                <h5>GRE</h5>
+                                <span style="font-size: 7.5px">Graduate Record Examinations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card "
+                     style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
+                    <div class="card-content">
+                        <div class="card-body">
+
+                            <div style="text-align: center;font-size: 60px">
+                                <i class="fas fa-book-open" style="color: #6088c0"></i>
+
+                            </div>
+                            <div style="text-align: center">
+                                <h5>TOEFL</h5>
+                                <span style="font-size: 7.5px">Test of English as a Foreign Language</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card " style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
+                    <div class="card-content">
+                        <div class="card-body">
+
+                            <div style="text-align: center;font-size: 60px">
+                                <i class="fas fa-book-open" style="color: #6088c0"></i>
+
+                            </div>
+                            <div style="text-align: center">
+                                <h5>IELTS</h5>
+                                <span style="font-size: 7.5px">International English Language Testing System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card "
+                     style="width: 150px;border-radius: 15px;background-color: #eff3f8;padding-bottom: 22px">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div style="text-align: center;font-size: 60px">
+                                <i class="fas fa-book-open" style="color: #6088c0"></i>
+
+                            </div>
+                            <div style="text-align: center">
+                                <h5>PTE</h5>
+                                <span style="font-size: 7.5px">Pearson Tests of English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card " style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div style="text-align: center;font-size: 60px">
+                                <i class="fas fa-book-open" style="color: #6088c0"></i>
+
+                            </div>
+                            <div style="text-align: center;padding-bottom: 22px">
+                                <h5>SAT</h5>
+                                <span style="font-size: 7.5px">Scholastic Aptitude Test</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
