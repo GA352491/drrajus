@@ -1,0 +1,1222 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title> Courses </title>
+{% endblock %}
+
+{% block style %}
+    {% include 'courses/courses_css.html' %}
+{% endblock %}
+
+{% block nav %}
+    {% include 'snippets/navbar.html' %}
+{% endblock %}
+{% block content %}
+    <div class="container " style="margin-bottom: 40px;margin-top: 40px">
+        <div class="row">
+
+            <div class="col-sm ">
+                <div class="card mb-5  mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center">
+                                <h3 style="color: #ff8e5e">GRE</h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 17,499</h5>
+                                <hr style="color: gray">
+                                <div class="container">
+
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Verbal Module – 16 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Analytical writing – 4 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Quant – 25 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        All Material Inclusive
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Vocabulary Online Course & App
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        10 Full length Mock tests
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        4-6 Weeks Duration (Mon-Sat)
+                                    </p>
+                                    <!-- <p style="color: gray"><i class="fas fa-check"></i>
+                                         offline & online
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         Full length tests
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         All materials included
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         1 year validity
+                                     </p>-->
+                                    <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                        <!-- <div class="card-footer" style="padding-top: 80px">
+
+                                            <div class=""
+                                                 style="position: absolute; bottom: 15px; width: 85%;">
+                                                <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#ff8e5e;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center">
+                                <h3 style="color: #ff8e5e">IELTS/TOEFL/PTE</h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 7,499</h5>
+                                <hr style="color: gray">
+                                <div class="container">
+
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Reading- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Writing- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Listening- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        Speaking- 6 Classes
+                                    </p>
+                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                        All materials Inclusive
+                                    </p>
+                                    <!-- <p style="color: gray"><i class="fas fa-check"></i>
+                                         offline & online
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         Full length tests
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         All materials included
+                                     </p>
+                                     <p style="color: gray"><i class="fas fa-check"></i>
+                                         1 year validity
+                                     </p>-->
+                                    <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                        <!--<div class="card-footer" style="padding-top: 80px">
+
+                                            <div class=""
+                                                 style="position: absolute; bottom: 15px; width: 85%;">
+                                                <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center ;">
+                                <h3 style="color: #ff8e5e">Duo Lingo </h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 7,499</h5>
+                            </div>
+                            <hr style="color: gray">
+
+                            <div class="container" style="text-align: center ;float: left;">
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Reading- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Writing- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Listening- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    Speaking- 3 Classes
+                                </p>
+                                <p style="color: gray"><i class="fas fa-check"></i>
+                                    All materials Inclusive
+                                </p>
+                                <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                    <br>
+                                    <br>
+                                    <!--<div class="card-footer">
+
+                                        <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                            <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                               tabindex="-1"
+                                               role="button"
+                                               aria-disabled="true"
+                                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-content">
+                        <div class="card-body d-flex flex-column">
+                            <div class="justify-content-center" style="text-align: center ;">
+                                <h3 style="color: #ff8e5e">GRE + IELTS/TOEFL/PTE </h3>
+                                <h5><i class="fas fa-rupee-sign"></i> 19,999</h5>
+                            </div>
+                            <hr style="color: gray">
+
+                            <div class="container" style="text-align: center ;float: left;">
+                                Speical price all courses included
+                                <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                    <br>
+                                    <br>
+                                    <!-- <div class="card-footer">
+
+                                        <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                            <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                               tabindex="-1"
+                                               role="button"
+                                               aria-disabled="true"
+                                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials-clean " >
+        <div class="container" style="padding-bottom: 35px">
+            <div class="intro">
+                <h2 class="text-center" style="color: #6088c0">Testimonials </h2>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
+                            instrumental in helping me get high scores in both the tests</p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Meher Uddaraju</h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px">GRE 331/340 , TOEFL 116/120.</p></b>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">The tutors here are very informative and friendly. The materials provided
+                            by Dr Raju’s were very resourceful. Recently I have done with my IELTS </p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Sri Harshini Popuri</h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px"> IELTS 7.5/9.0</p></b>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">I know I am an average student in english and it is no exaggeration that
+                            they made me to score 321 in GRE , of course you must put ur efforts too</p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Sai Krishna</h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px">GRE 321/340, University of
+                            Cincinnati, MS in CS</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description"> heard about Dr. Raju’s from my cousins and friends, who have been
+                            through their GRE and IELTS training. The faculty was very helpful. We were also provided
+                            with detailed materials. I would definitely suggest Dr Raju's for fulfilling your dreams of
+                            joining in ambitious universities.</p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Vivek Neppalli </h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px">IELTS- 7.5/9</p></b>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">It's a wonderful experience being here. Everything here runs based on
+                            students convenience. Staff and faculty working here are really helpful and friendly. </p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Akanksha Vaddlamanati</h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px"> IELTS 7/9</p></b>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">It makes use of one of the best techniques to make a student understand
+                            the concepts necessary to ace the GRE test. I personally liked the supporting materials for
+                            verbal, and Quant material was exhaustive. The educators were very patient when i had
+                            doubts. </p>
+                    </div>
+                    <div class="author">
+                        <h5 class="name">Charishma Ponuganti</h5>
+                        <b><p class="title" style="color: #ff8e5e;font-size: 17px">GRE: 320/340, University of Southern
+                            California</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " style="padding-top: 20px">
+        <div class="d-flex justify-content-center">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top d-flex justify-content-center">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                            class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                            class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Prasad Raju.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Raju </h4>
+                                        <h6 class="category text-muted"> Director </h6>
+                                        <br>
+                                        <p class="card-description"> MSC.University of connecticut USA,Phd </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Laxmi.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">LAXMI DANDU </h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> MSC. Computer Science experience in university
+                                            suggestions and Applications </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Neelima.jpeg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Neelima</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description">MBA Human Resources Experience in University
+                                            Guidance </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'Alekhya.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Alekhya</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <img class="card-img-top mx-auto d-block"
+                                             src="{% static 'Jayasurya.jpg' %}"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Jayasurya</h4>
+                                        <h6 class="category text-muted">Verbal & Quant Faculty </h6>
+                                        <br>
+                                        <p class="card-description">MSC.Entrepreneurship , Brown University </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'DSC6532copy.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Janaki M</h4>
+                                        <h6 class="category text-muted">Student counselor</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'Prasad Ravi.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Ravi</h4>
+                                        <h6 class="category text-muted">Senior Verbal Faculty</h6>
+                                        <p class="card-description">MA Political Science ,20+years Experience in
+                                            teaching </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'RK Sir.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Krishna Reddy </h4>
+                                        <h6 class="category text-muted">Senior Math Faculty</h6>
+                                        <p class="card-description"> 15+ Year's Experience in teaching GRE,GMAT and CAT
+                                            Courses </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Second slide-->
+
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+{% endblock %}
+<div class="container-fluid">
+    <div class="container card shadow d-flex justify-content-center mt-5">
+        <!-- nav options -->
+        <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                   href="#pills-home"
+                   role="tab" aria-controls="pills-home" aria-selected="true">plan1</a></li>
+            <li class="nav-item"><a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">plan2</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+                                    role="tab" aria-controls="pills-contact" aria-selected="false">plan3</a></li>
+        </ul>
+        <!-- content -->
+        <div class="tab-content" id="pills-tabContent p-3">
+            <!-- 1st card -->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">GRE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 15,999</h5>
+                                        <hr style="color: gray">
+                                        <div class="container" style="">
+                                            <div class=" justify-content-center">
+                                                <p style="color: gray"><i class="fas fa-check"></i>
+                                                    4-6 weeks duration
+                                                </p>
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    22 verbal hours,25 math hours
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    All Material included
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    10 Full length tests
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    online accessibility
+                                                </p>
+
+
+                                                <p style="color: gray"><i
+                                                        class="fas fa-check"></i>
+                                                    1 year validity
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more ->
+                                            </a>
+                                        </span>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+                                                    <a href="{% url 'payment' %}" class="btn mx-auto btn-lg "
+                                                       tabindex="-1"
+                                                       role="button"
+                                                       aria-disabled="true"
+                                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">IELTS/TOEFL/PTE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 5,999</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                4 Weeks duration
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Listening 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                speaking 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                writing 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Reading 6 hours
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                offline & online
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                Full length tests
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                All materials included
+                                            </p>
+                                            <p style="color: gray"><i class="fas fa-check"></i>
+                                                1 year validity
+                                            </p>
+                                            <div>
+
+
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                                <div class="card-footer" style="padding-top: 80px">
+
+                                                    <div class=""
+                                                         style="position: absolute; bottom: 15px; width: 85%;">
+                                                        <a href="{% url 'payment2' %}" class="btn mx-auto btn-lg "
+                                                           tabindex="-1"
+                                                           role="button"
+                                                           aria-disabled="true"
+                                                           style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center ;">
+                                        <h3 style="color: #F2594B">GRE + IELTS/TOEFL/PTE </h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 19,999</h5>
+                                    </div>
+                                    <hr style="color: gray">
+
+                                    <div class="container" style="text-align: center ;float: left;">
+                                        Speical price all courses included
+                                        <div>
+                                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a></span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <div class="" style="position: absolute; bottom: 15px; width: 85%;">
+
+                                                    <a href="{% url 'payment3' %}" class="btn mx-auto btn-lg "
+                                                       tabindex="-1"
+                                                       role="button"
+                                                       aria-disabled="true"
+                                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 2nd card -->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">GRE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 10,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                Gradutae Reward Exam(GRE), is a test written by Prospective Graduate
+                                                students,
+                                                applying for Master's courses in multiple Universities across USA,
+                                                Canada,
+                                                and other European countries.
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                If you're looking to study Graduate courses (Masters or MBA) in top
+                                                Universities
+                                                across the world, submitting GRE scores is a mandatory requirement.
+                                                Universities
+                                                take GRE Scores to be a common indicator of a student's Analytical,
+                                                Logical, and
+                                                Verbal Reasoning Skills. This test, conducted by a non-profit
+                                                educational
+                                                assessment and research organization called ETS, was designed to
+                                                reflect
+                                                a
+                                                student's critcal thinking abilities.
+
+                                            </p>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">TOFEL</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 5,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                Test of English as a Foreign Langugae(TOEFL), is a computer based
+                                                english
+                                                language test which tests a student's English Reading, Writing,
+                                                Listening, and
+                                                Speaking skills.
+
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                For almost every foreign University where courses are taught in
+                                                Engllish, it's
+                                                mandatory for a student whose native language is not English, to
+                                                submit
+                                                minimum
+                                                scores in a certified English language test. TOEFL is one of the
+                                                three
+                                                popular
+                                                tests, the other two being IELTS and PTE.
+
+                                            </p>
+
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 3nd card -->
+            <div class="tab-pane fade third" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row">
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">IELTS</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 3,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                The International English Language Testing System(IELTS), is a paper
+                                                based test
+                                                designed to assess Test Taker's English communnication skills in
+                                                Reading,
+                                                Writing, Listening and Speaking tasks. The Exam is scored out of 9
+                                                Bands, to
+                                                measure the level of proficiency in English. Band score 1 is
+                                                attributed
+                                                as
+                                                Non-Speaker and 9 as Expert.
+
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                There are two types in the IELTS- General and Academic. Test takers
+                                                who
+                                                are
+                                                applying to Universities are required to write Academic version,
+                                                where
+                                                as those
+                                                who are migrating for work need to write the General Version.
+
+                                            </p>
+
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="{% url 'courses' %}" class="btn mx-auto btn-lg "
+                                                   tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="justify-content-center" style="text-align: center">
+                                        <h3 style="color: #F2594B">PTE</h3>
+                                        <h5><i class="fas fa-rupee-sign"></i> 4,000</h5>
+                                        <hr style="color: gray">
+                                        <div class="container">
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                                The Pearson Test for English, is generally take by Non-native
+                                                English
+                                                speakers
+                                                to prove their Reading, Writing, Listening and Speaking skills, to
+                                                the
+                                                Universities where courses are taught in the English Language. PTE
+                                                is an
+                                                Online
+                                                based Test
+                                            </p>
+                                            <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                                To complete a PTE Academic test, you will need to attend a secure
+                                                Pearson test
+                                                center. You will use a computer and headset to listen to, read, and
+                                                respond to
+                                                questions. During the three-hour test session there will be three
+                                                main
+                                                parts to
+                                                the test: speaking and writing (together), listening and reading.
+                                            </p>
+
+                                            <br>
+                                            <br>
+                                            <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                            <br>
+                                            <br>
+                                            <div class="card-footer">
+
+                                                <a href="
+                                    {% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                                   role="button"
+                                                   aria-disabled="true"
+                                                   style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!--<div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body d-flex flex-column">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">GRE</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 10,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    Gradutae Reward Exam(GRE), is a test written by Prospective Graduate students,
+                                    applying for Master's courses in multiple Universities across USA, Canada,
+                                    and other European countries.
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    If you're looking to study Graduate courses (Masters or MBA) in top Universities
+                                    across the world, submitting GRE scores is a mandatory requirement. Universities
+                                    take GRE Scores to be a common indicator of a student's Analytical, Logical, and
+                                    Verbal Reasoning Skills. This test, conducted by a non-profit educational
+                                    assessment and research organization called ETS, was designed to reflect a
+                                    student's critcal thinking abilities.
+
+                                </p>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--<div class="card-footer ">
+                                        <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">TOFEL</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 5,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    Test of English as a Foreign Langugae(TOEFL), is a computer based english
+                                    language test which tests a student's English Reading, Writing, Listening, and
+                                    Speaking skills.
+
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    For almost every foreign University where courses are taught in Engllish, it's
+                                    mandatory for a student whose native language is not English, to submit minimum
+                                    scores in a certified English language test. TOEFL is one of the three popular
+                                    tests, the other two being IELTS and PTE.
+
+                                </p>
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">IELTS</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 3,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    The International English Language Testing System(IELTS), is a paper based test
+                                    designed to assess Test Taker's English communnication skills in Reading,
+                                    Writing, Listening and Speaking tasks. The Exam is scored out of 9 Bands, to
+                                    measure the level of proficiency in English. Band score 1 is attributed as
+                                    Non-Speaker and 9 as Expert.
+
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    There are two types in the IELTS- General and Academic. Test takers who are
+                                    applying to Universities are required to write Academic version, where as those
+                                    who are migrating for work need to write the General Version.
+
+                                </p>
+
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="{% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="justify-content-center" style="text-align: center">
+                            <h3 style="color: #F2594B">PTE</h3>
+                            <h5><i class="fas fa-rupee-sign"></i> 4,000</h5>
+                            <hr style="color: gray">
+                            <div class="container">
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+
+                                    The Pearson Test for English, is generally take by Non-native English speakers
+                                    to prove their Reading, Writing, Listening and Speaking skills, to the
+                                    Universities where courses are taught in the English Language. PTE is an Online
+                                    based Test
+                                </p>
+                                <p style="text-align: left;color: gray"><i class="fas fa-check"></i>
+                                    To complete a PTE Academic test, you will need to attend a secure Pearson test
+                                    center. You will use a computer and headset to listen to, read, and respond to
+                                    questions. During the three-hour test session there will be three main parts to
+                                    the test: speaking and writing (together), listening and reading.
+                                </p>
+
+                                <br>
+                                <br>
+                                <span style="float: right">
+                                            <a href="" style="color: gray">Know more -></a>
+                                        </span>
+                                <br>
+                                <br>
+                                <div class="card-footer">
+
+                                    <a href="
+                                    {% url 'courses' %}" class="btn mx-auto btn-lg " tabindex="-1"
+                                       role="button"
+                                       aria-disabled="true"
+                                       style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--<div class="card-footer ">
+                                        <span style="float: right"><a href=""
+                                                                      style="color: gray">Know more -></a> </span>
+                            <br>
+                            <br>
+
+                            <a href="{% url 'courses' %}" class="btn  btn-lg " tabindex="-1"
+                               role="button"
+                               aria-disabled="true"
+                               style="background:#F2594B;color: white;border-radius: 12px; ">Subscribe</a>
+                        </div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
