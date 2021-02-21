@@ -3,12 +3,12 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
 
 from .models import *
+from .forms import PostForm
 from django.contrib.auth.models import Group
 
 # Register your models here.
 
 admin.site.site_header = "Dr Raju's Dashboard"
-
 
 admin.site.unregister(Group)
 
@@ -23,4 +23,7 @@ class CoursesAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Payment, PaymentAdmin)
-admin.site.register(Courses,CoursesAdmin)
+admin.site.register(Courses, CoursesAdmin)
+
+
+admin.site.register(Blog)
