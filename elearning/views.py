@@ -144,13 +144,14 @@ def privacy(request):
 
 def blog(request):
     form = PostForm()
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.order_by('id')
     paginator = Paginator(blogs, per_page=4)
     page_request_var = 'page'
     page = request.GET.get(page_request_var)
+
     try:
         paginated_query_set = paginator.page(page)
-    except PageNotAnInteger:
+    except PageNotAnInteger or page == None:
         paginated_query_set = paginator.page(1)
     except EmptyPage:
         paginated_query_set = paginator.page(paginator.num_pages)
