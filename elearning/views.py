@@ -147,13 +147,14 @@ def blog(request):
     blogs = Blog.objects.order_by('id')
     paginator = Paginator(blogs, per_page=4)
     page_request_var = 'page'
-    page = request.GET.get('page')
+    page = request.GET.get('page', 1)
+
     try:
-        paginated_query_set = paginator.get_page(page)
+        paginated_query_set = paginator.page(page)
     except PageNotAnInteger:
-        paginated_query_set = paginator.get_page(1)
+        paginated_query_set = paginator.page(1)
     except EmptyPage:
-        paginated_query_set = paginator.get_page(paginator.num_pages)
+        paginated_query_set = paginator.page(paginator.num_pages)
 
     context = {'queryset': paginated_query_set, 'page_request_var': page_request_var, 'blogs': blogs, 'form': form}
     return render(request, 'blogs/blog.html', context)
