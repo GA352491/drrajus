@@ -186,4 +186,6 @@ TINYMCE_DEFAULT_CONFIG = {
 
 }
 
+TINYMCE_JS_URL = os.path.join(STATIC_URL, "elearning/static/blogs/tinymce.js")
+
 
