@@ -24,3 +24,17 @@ class Courses(models.Model):
 
     def __str__(self):
         return self.course_name
+
+
+from tinymce import HTMLField
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=200, null=True, blank=True)
+    overview = models.TextField(max_length=400, null=True, blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    content = HTMLField('Content')
+    thumbnail = models.ImageField(upload_to='Blog')
+
+    def __str__(self):
+        return self.title
