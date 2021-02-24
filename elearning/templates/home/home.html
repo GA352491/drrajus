@@ -6,6 +6,12 @@
 
 {% block style %}
     {% include 'home/home_css.html' %}
+    <style>
+        .carousel {
+            height: 100%;
+            width: 90%;
+        }
+    </style>
 {% endblock %}
 
 {% block nav %}
@@ -26,7 +32,7 @@
                         </h4>
                     </div>
                     <div class="col-sm-6 order-1 order-lg-1">
-                        <img src="{% static 'home/8294.jpg' %}" class="img-fluid"
+                        <img src="{% static 'home/4.png' %}" class="img-fluid"
                              alt="Responsive image">
                     </div>
                 </div>
@@ -64,7 +70,7 @@
             </div>
 
             <div class="col-sm order-1  order-lg-2 " style="margin-top: 30px">
-                <img src="{% static 'vectors/Studying Concept Illustration.svg' %}"
+                <img src="{% static 'home/8294.jpg' %}"
                      class="img-fluid"
                      alt="Responsive image">
 
@@ -229,20 +235,20 @@
             </div>
         </div>
     </div>
-        <div class="container">
+    <!--<div class="container">
         <div class="container">
             <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
 
             <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                 <div class="col">
-                    <div class="p-3">
-                        <img src="{% static 'University_Logos/Brown_Logo.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 100px;"/>
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Dartmouth.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
                 <div class="col">
                     <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Calgary.png' %}" alt="image-responsive"
+                        <img src="{% static 'University_Logos/Johns_Hopkins.png' %}" alt="image-responsive"
                              style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
@@ -252,6 +258,64 @@
                              style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Maryland.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/McGill University.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/NCSU.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Georgia Tech.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/MIT_LOGO.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <img src="{% static 'University_Logos/Northwestern University.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/PennState.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3">
+                        <img src="{% static 'University_Logos/Brown_Logo.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 100px;"/>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-3 ">
+                        <img src="{% static 'University_Logos/Calgary.png' %}" alt="image-responsive"
+                             style="width: 100%;height: auto;max-width: 180px;"/>
+                    </div>
+                </div>
+
                 <div class="col">
                     <div class="p-3 ">
                         <img src="{% static 'University_Logos/CMU.png' %}" alt="image-responsive"
@@ -270,24 +334,14 @@
                              style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Dartmouth.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
+
                 <div class="col">
                     <div class="p-3 ">
                         <img src="{% static 'University_Logos/DukeUniversity.jpeg' %}" alt="image-responsive"
                              style="width: 100%;height: auto;max-width: 150px;"/>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Georgia Tech.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
+
                 <div class="col">
                     <div class="p-3 ">
                         <img src="{% static 'University_Logos/Grenoble.png' %}" alt="image-responsive"
@@ -300,42 +354,8 @@
                              style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Johns_Hopkins.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Maryland.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/McGill University.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/MIT_LOGO.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/NCSU.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img src="{% static 'University_Logos/Northwestern University.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
+
+
                 <div class="col">
                     <div class="p-3 ">
                         <img src="{% static 'University_Logos/NYU_Stern.jpeg' %}" alt="image-responsive"
@@ -348,17 +368,300 @@
                              style="width: 100%;height: auto;max-width: 180px;"/>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/PennState.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
+
+
+            </div>
+        </div>
+    </div>-->
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+
+        <div class="carousel-inner">
+            <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
+            <div class="carousel-item active">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Dartmouth.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
                     </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Johns_Hopkins.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/CaseWesternReserve.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Maryland.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/McGill University.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/NCSU.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Georgia Tech.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/MIT_LOGO.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="{% static 'University_Logos/Northwestern University.png' %}"
+                                 alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/PennState.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="{% static 'University_Logos/Brown_Logo.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 100px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Calgary.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/CMU.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 150px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Columbia.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Cornell_logo.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/DukeUniversity.jpeg' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 150px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Grenoble.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Indiana_University.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/NYU_Stern.jpeg' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/OhioStateUniversity.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Purdue.jpeg' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Rice.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/TAMU.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/Toronto.jpeg' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UBC.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UC_Boulder.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UCBerkley.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UCDavis.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="{% static 'University_Logos/UCLA.png' %}"
+                                 alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UConn.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="{% static 'University_Logos/UCSD.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 100px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UIUC.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UMass,Amherst.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 150px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UMich.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UMinn_Twin_cities.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UNC_Chapel_Hill.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 150px;"/>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UPenn.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/USC.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UTAustin.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 ">
+                            <img src="{% static 'University_Logos/UPenn.png' %}" alt="image-responsive"
+                                 style="width: 100%;height: auto;max-width: 180px;"/>
+                        </div>
+                    </div>
+
+
                 </div>
 
             </div>
         </div>
-    </div>
+        <div class="controls-top d-flex justify-content-center">
+            <a class="btn-floating" href="#carouselExampleControls" data-slide="prev"><i
+                    class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+            <a class="btn-floating" href="#carouselExampleControls" data-slide="next"><i
+                    class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+        </div>
 
+
+    </div>
 
     <div class="container-fluid" style="padding-top: 100px;margin-bottom: 30px">
         <div style="background-color: #f7f7f7">
@@ -483,575 +786,3 @@
 
 {% endblock %}
 
-
-https://www.behance.net/gallery/99597805/Online-Education-Landing-Page?tracking_source=search_projects_recommended%7Ce%20learning
-https://www.behance.net/gallery/104568931/Online-Education-Website-Design?tracking_source=search_projects_recommended%7Ce%20learning%20
-https://www.color-hex.com/color/6088c0
-
-<div class="container">
-    <h2>LATEST BLOGS </h2>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="img-box"><img src="{% static 'masters-degree.jpg' %}" alt=""
-                ></div>
-                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
-                    Etiam
-                    faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus
-                    risus,
-                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
-                <p class="overview"><b>Michael Holz</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
-
-            </div>
-            <div class="carousel-item">
-                <div class="img-box"><img src="{% static 'Topuniversities.jpeg' %}" alt="img-responsive"></div>
-                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
-                    tempor,
-                    varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada
-                    ante.
-                    Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non
-                    aliquet.</p>
-                <p class="overview"><b>Paula Wilson</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
-
-            </div>
-            <div class="carousel-item">
-                <div class="img-box"><img src="{% static 'toeflblog.jpg' %}" alt="img-responsive"></div>
-                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi
-                    a mi
-                    suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis.
-                    Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor
-                    velit.</p>
-                <p class="overview"><b>Antonio Moreno</b>Web Developer at <a href="#">Circle Ltd.</a></p>
-
-            </div>
-        </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-        </a>
-
-    </div>
-</div>
-
-
-<div class="col-sm">
-    <div class="card" style="border: none">
-        <div class="card-content">
-            <div class="card-body">
-                <!--<div class="media">
-                    <div style="float: left">
-                        <h4>TOFEL</h4>
-                    </div>
-                    <div style="text-align: right">
-                        <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
-                                class="fas fa-long-arrow-alt-right"></i></span></a>
-
-                    </div>
-                </div>-->
-                <div class="d-flex justify-content-center">
-                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <h5>TOFEL</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm">
-    <div class="card" style="border: none">
-        <div class="card-content">
-            <div class="card-body">
-                <!--<div class="media">
-                    <div style="float: left">
-                        <h4>IELTS</h4>
-                    </div>
-                    <div style="text-align: right">
-                        <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
-                                class="fas fa-long-arrow-alt-right"></i></span></a>
-
-                    </div>
-                </div>-->
-                <div class="d-flex justify-content-center">
-                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <h5>IELTS</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm">
-    <div class="card" style="border: none">
-        <div class="card-content">
-            <div class="card-body">
-                <!-- <div class="media">
-
-
-                     <div style="float: left">
-                         <h4>PTE</h4>
-
-                     </div>
-                     <div style="text-align: right">
-                         <a href="#" style="text-decoration: none;color: #92A99E"  ><span>Track <i class="fas fa-long-arrow-alt-right"></i></span></a>
-
-                     </div>
-                 </div>-->
-                <div class="d-flex justify-content-center">
-                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <h5>PTE</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm">
-    <div class="card" style="border: none">
-        <div class="card-content">
-            <div class="card-body">
-                <div class="d-flex justify-content-center">
-                    <span><i class="fas fa-book circle-icon" style="font-size: 40px"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <h5>DUO LINGO</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div style="float: left">
-        <h2><b>Facts & Figures </b></h2>
-    </div>
-    <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="d-flex" style="border: none">
-                <div>
-                    <div class="card shadow"
-                         style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
-                        <div class="card-body">
-
-                            <i class="fas fa-user-graduate "
-                               style="font-size: 60px;color: #6088c0!important;">
-
-                            </i>
-                        </div>
-                    </div>
-                    <div style="float: right;padding-top: 20px;padding-left: 20px">
-                        <h3>20000<span style="color:#048ABF!important;"><i
-                                class="fas fa-long-arrow-alt-up"></i></span>
-                        </h3>
-                        <span>Students</span>
-                    </div>
-                </div>
-                <!-- <div class="media-body" style="float: right">
-                     <h3>20000<span style="color:#048ABF!important;"><i
-                             class="fas fa-long-arrow-alt-up"></i></span>
-                     </h3>
-                     <span>Students</span>
-                 </div>-->
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-body">
-                        <div>
-                            <div>
-                                <i class="fas fa-university float-left"
-                                   style="font-size: 60px;color: #6088c0!important;"></i>
-                            </div>
-                            <div class="media-body text-right">
-                                <h3>4000<span style="color:#048ABF!important;"><i
-                                        class="fas fa-long-arrow-alt-up"></i></span>
-                                </h3>
-                                <span>University Applications</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-body">
-                        <div>
-                            <div>
-                                <i class="fas fa-passport float-left"
-                                   style="font-size: 60px;color: #6088c0!important;"></i>
-                            </div>
-                            <div class="media-body text-right">
-                                <h3>3500<span style="color:#048ABF!important;"><i
-                                        class="fas fa-long-arrow-alt-up"></i></span>
-                                </h3>
-                                <span>Approved Visa's</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-body">
-                        <div>
-                            <div>
-                                <i class="fas fa-globe float-left"
-                                   style="font-size: 60px;color: #6088c0!important;"></i>
-                            </div>
-                            <div class="media-body text-right">
-                                <h3>4<span style="color:#048ABF!important;"><i
-                                        class="fas fa-long-arrow-alt-up"></i></span></h3>
-                                <span>Countries</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="container-fluid" style="padding-top: 100px">
-    <div class="team-boxed">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">What our Students Say ? </h2>
-            </div>
-            <div class="row people">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
-                        <h3 class="name">Charishma Ponugoti</h3>
-                        <p class="title">University Of Souther California, 2017</p>
-                        <p class="description">It makes use of one of the best techniques to make a student
-                            understand
-                            the concepts necessary to ace the GRE test. I personally liked the supporting
-                            materials
-                            for
-                            verbal, and Quant material was exhaustive. The educators were very patient when i
-                            had
-                            doubts. This is probably another striking feature of their institution, to have an
-                            explicit
-                            time for doubts too. This encouraged me to solve more questions and prepare myself
-                            better
-                            for the upcoming battle. I would suggest Dr.Raju's for coaching anyday !! </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
-                                href="#"><i
-                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
-                        <h3 class="name">Madhavi Latha</h3>
-                        <p class="title">Student</p>
-                        <p class="description">It was very good. They have helped from the beginning and I was
-                            able
-                            to
-                            score good marks and got admit in a good university. It was possible because of
-                            their
-                            guidence. Thank you!
-
-                            . </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
-                                href="#"><i
-                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'im.JPG' %}">
-                        <h3 class="name">Likitha Srininvas</h3>
-                        <p class="title">Student</p>
-                        <p class="description">It was very good. They have helped from the beginning and I was
-                            able
-                            to
-                            score good marks and got admit in a good university. It was possible because of
-                            their
-                            guidence. Thank you!
-
-                            . </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a
-                                href="#"><i
-                                class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    .team-boxed {
-        color: #313437;
-    }
-
-    .team-boxed p {
-        color: #7d8285;
-    }
-
-    .team-boxed h2 {
-        font-weight: bold;
-        margin-bottom: 40px;
-        padding-top: 40px;
-        color: inherit;
-    }
-
-    @media (max-width: 767px) {
-        .team-boxed h2 {
-            margin-bottom: 25px;
-            padding-top: 25px;
-            font-size: 24px;
-        }
-    }
-
-    .team-boxed .intro {
-        font-size: 16px;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .team-boxed .intro p {
-        margin-bottom: 0;
-    }
-
-    .team-boxed .people {
-        padding: 50px 0;
-    }
-
-    .team-boxed .item {
-        text-align: center;
-    }
-
-    .team-boxed .item .box {
-        text-align: center;
-        padding: 30px;
-        background-color: #fff;
-        margin-bottom: 30px;
-    }
-
-    .team-boxed .item .name {
-        font-weight: bold;
-        margin-top: 28px;
-        margin-bottom: 8px;
-        color: inherit;
-    }
-
-    .team-boxed .item .title {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #d0d0d0;
-        letter-spacing: 2px;
-        font-size: 13px;
-    }
-
-    .team-boxed .item .description {
-        font-size: 15px;
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
-
-    .team-boxed .item img {
-        max-width: 160px;
-    }
-
-    .team-boxed .social {
-        font-size: 18px;
-        color: #a2a8ae;
-    }
-
-    .team-boxed .social a {
-        color: inherit;
-        margin: 0 10px;
-        display: inline-block;
-        opacity: 0.7;
-    }
-
-    .team-boxed .social a:hover {
-        opacity: 1;
-    }
-
-
-</style>
-
-<style>
-    .containers {
-        overflow: hidden;
-    }
-
-    .slider {
-        animation: slidein 30s linear infinite;
-        white-space: nowrap;
-
-    }
-
-    .logos {
-        width: 100%;
-        display: inline-block;
-        margin: 0px 0;
-    }
-
-    .fab {
-        width: calc(100% / 5);
-        animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-    }
-
-
-    @keyframes slidein {
-        from {
-            transform: translate3d(0, 0, 0);
-        }
-        to {
-            transform: translate3d(-100%, 0, 0);
-        }
-    }
-
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-
-</style>
-
-<div class="container" style="padding-top: 15px">
-    <div>
-        <div style="float: left">
-            <h2 style="color: #6088c0"><b>Register for Courses </b></h2>
-        </div>
-        <div style="float: right;padding-right: 78px;padding-top: 30px">
-            <a href="{% url 'courses' %}"
-               style="color: #4c6c99!important;text-decoration:none ">Know more
-            </a>
-        </div>
-    </div>
-    <div>
-        <div class="row d-flex flex-row flex-nowrap overflow-auto ">
-
-
-            <div class="col">
-                <div class="card "
-                     style="width: 150px;  border-radius: 15px;background-color: #eff3f8;padding-bottom: 22px">
-                    <div class="card-content">
-                        <div class="card-body">
-                            <!--<div class="media">
-                                <div style="float: left">
-                                    <h4>GRE</h4>
-                                </div>
-                                <div style="text-align: right">
-                                    <a href="#" style="text-decoration: none;color: #92A99E"><span>Track <i
-                                            class="fas fa-long-arrow-alt-right"></i></span></a>
-
-                                </div>
-
-                            </div>-->
-                            <div style="text-align: center;font-size: 60px">
-                                <i class="fas fa-book-open" style="color: #6088c0"></i>
-
-                            </div>
-                            <div style="text-align: center">
-                                <h5>GRE</h5>
-                                <span style="font-size: 7.5px">Graduate Record Examinations</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card "
-                     style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
-                    <div class="card-content">
-                        <div class="card-body">
-
-                            <div style="text-align: center;font-size: 60px">
-                                <i class="fas fa-book-open" style="color: #6088c0"></i>
-
-                            </div>
-                            <div style="text-align: center">
-                                <h5>TOEFL</h5>
-                                <span style="font-size: 7.5px">Test of English as a Foreign Language</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card " style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
-                    <div class="card-content">
-                        <div class="card-body">
-
-                            <div style="text-align: center;font-size: 60px">
-                                <i class="fas fa-book-open" style="color: #6088c0"></i>
-
-                            </div>
-                            <div style="text-align: center">
-                                <h5>IELTS</h5>
-                                <span style="font-size: 7.5px">International English Language Testing System</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card "
-                     style="width: 150px;border-radius: 15px;background-color: #eff3f8;padding-bottom: 22px">
-                    <div class="card-content">
-                        <div class="card-body">
-                            <div style="text-align: center;font-size: 60px">
-                                <i class="fas fa-book-open" style="color: #6088c0"></i>
-
-                            </div>
-                            <div style="text-align: center">
-                                <h5>PTE</h5>
-                                <span style="font-size: 7.5px">Pearson Tests of English</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card " style="width: 150px;border-radius: 15px;background-color: #eff3f8;">
-                    <div class="card-content">
-                        <div class="card-body">
-                            <div style="text-align: center;font-size: 60px">
-                                <i class="fas fa-book-open" style="color: #6088c0"></i>
-
-                            </div>
-                            <div style="text-align: center;padding-bottom: 22px">
-                                <h5>SAT</h5>
-                                <span style="font-size: 7.5px">Scholastic Aptitude Test</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
