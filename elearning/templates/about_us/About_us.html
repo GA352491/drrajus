@@ -1,0 +1,392 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>About Us </title>
+{% endblock %}
+{% block style %}
+    {% include 'about_us/about_us_css.html' %}
+{% endblock %}
+{% block nav %}
+    {% include 'snippets/navbar.html' %}
+{% endblock %}
+{% block content %}
+
+
+    <style>
+        .user-text {
+
+            box-sizing: border-box;
+        {#position: absolute;#}{#left: 0;#}{#top: 50%;#}{#transform: translateY(-50%);#} border-radius: 10px;
+            z-index: 12;
+
+        }
+    </style>
+
+
+    <div class="container-fluid " style="padding-top: 20px;background-color: #eff3f8">
+
+
+        <div class="d-flex justify-content-center">
+            <h2 style="text-align: center;color: #6088c0" class="fw-bold">About us</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="fw-bold" style="text-align: center;width: 50%">
+                Here are our founders who have pursued their master's abroad and are now guiding students to
+                universities across the world!
+
+            </p>
+        </div>
+
+        <span class="d-flex justify-content-center" style="padding-bottom:20px ">
+            <a href="tel:+91 812532244" class="btn btn-outline-secondary btn-lg" tabindex="-1" role="button"
+               aria-disabled="true">Contact Us </a>
+        </span>
+
+
+    </div>
+    <div class="container " style="padding-top: 20px">
+        <div class="row g-0">
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm" style="background-color: lightgray;border: none;border-radius: 2px">
+                    <div class="card-body">
+                        <img class="img-fluid" src="{% static "about_us/Dr.Raju's.png" %}" height="280"
+                             width="280">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-8  mt-md-5   ">
+                <div class="card" style="border: none;border-radius: 2px;box-shadow: none">
+                    <div class="card-body">
+                        <p>Dr. Prasad Raju V.V.N.R Pathapati (aka Dr. Raju) received his B.E, M.E, MS, PhD
+                            degrees in Mechanical Engineering from Gulbarga, BITS (Pilani), University Of
+                            Connecticut (Storrs, US) and Pt. Ravishankar Shukla University (NIT-GEC, Raipur)
+                            respectively.
+                        </p>
+                        <p> Dr. Raju is a well admired Professor & Scientist in the field of theoretical and
+                            dynamic modelling of Kinematics, Robotics and Fuel Cells.
+                        <p>
+                            He published and reviewed several papers in International journals such as ASME
+                            (American
+                            Society of
+                            Mechanical Engineers, US), SAE (Society for Automotive Engineers, Michigan US),
+                            Elsevier
+                            Science
+                            (Renewable Energy), etc. Dr Raju has also worked as a Director, Principal,
+                            Professor,
+                            Head
+                            of the
+                            Department and Visiting Research Scholar in Reputed Engineering Colleges and
+                            Universities in
+                            India
+                            and Abroad.
+
+                        </p>
+                        <p> Dr. Raju has founded Dr Raju's Educational Academy in 2006 in order to
+                            provide
+                            GRE
+                            coaching and University guidance services, from his experience of pursuing
+                            Master’s
+                            in
+                            the
+                            USA. He
+                            has been relentlessly imparting his knowledge through GRE prep to over 20000+
+                            students
+                            for
+                            over 14
+                            years now, who were later guided by him to world renowned institutes like MIT,
+                            John
+                            Hopkins,
+                            U C
+                            Berkeley, U PENN, UCLA, Dartmouth, Brown, Columbia, Georgia Tech, Vanderbilt,
+                            North-western,
+                            University of Michigan, Ann Arbor, UIUC, UT Austin, Purdue, PENN State, Cornell
+                            etc.,
+                        </p>
+                        <p>He
+                            keeps
+                            immense knowledge regarding the wide ranging courses and programs in MS, PhD and
+                            MBA
+                            offered
+                            by
+                            different institutions in the US. Apart from teaching GRE verbal module, he also
+                            recommends
+                            university lists based on student’s profile.
+                        </p>
+
+                        <div class="row d-flex me-auto" style="display:inline-flex">
+                            <div class=" col  d-flex justify-content-start">
+                                <h5><i class="fas fa-user-alt"></i>
+                                    Dr.Prasad Raju Pathapati
+                                </h5>
+                            </div>
+                            <div class="col  d-flex justify-content-center">
+                                <h5>
+                                    <i class="fas fa-briefcase"></i>
+                                    Director
+                                </h5>
+                            </div>
+                            <div class="col  d-flex justify-content-end">
+
+                                <h5>
+                                    <i class="fas fa-university"></i> MSC.University of connecticut USA,Phd
+                                </h5>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container " style="padding-top: 20px">
+        <div class="row g-0">
+            <div class="col-sm-6 col-md-8 order-lg-1 order-2 pt-md-5 ">
+                <div class="card" style="border: none;border-radius: 2px;box-shadow: none">
+                    <div class="card-body">
+                        <p>Jayasurya Pathapati, is an Ivy-League graduate from Brown University, USA, with a
+                            Master’s in Entrepreneurship.
+                            After working at two startups in New York and Bangalore, he has joined as a
+                            Student
+                            advisor at Dr. Raju’s.</p>
+
+                        <p>Surya is deeply involved with the
+                            University applications, and reviews Personal essays and letters of every
+                            student
+                            who is
+                            applying to Master’s to different programs around the world. </p>
+                        <p> Drawing from his personal experience and network of peers studying in top
+                            universities around the world, he makes
+                            sure every student is well guided in applying to the best programs that match
+                            their
+                            profile, interests, and career goals.</p>
+                        <div class="row d-flex  me-auto" style="display:inline-flex">
+                            <div class=" col  d-flex justify-content-start">
+                                <h5><i class="fas fa-user-alt"></i>  Jayasurya P </h5></div>
+                            <div class="col  d-flex justify-content-center">
+                                <h5><i class="fas fa-briefcase"></i> Director</h5></div>
+                            <div class="col  d-flex justify-content-end">
+
+                                <h5><i class="fas fa-university"></i> M Sc Brown University
+                                </h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-4 order-lg-2 order-1 ">
+                <div class="card " style="border: none;border-radius: 2px;box-shadow: none">
+                    <div class="card-body">
+                        <img class="img-fluid" src="{% static "about_us/Jayasurya_Photo.png" %}"
+                             height="280"
+                             width="280">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid" style="padding-top: 20px">
+        <h3 style="text-align: center;color: #6088c0">TOUCH THEM IF YOU WANT</h3>
+        <h4 style="text-align: center;color: gray">LEARN FROM THE BEST</h4>
+    </div>
+
+    <div class="container-fluid" style="padding-top: 20px">
+        <div class="d-flex justify-content-center">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top d-flex justify-content-center">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                            class="fas fa-chevron-left" style="color: #F2594B"></i></a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                            class="fas fa-chevron-right" style="color: #F2594B"></i></a>
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'faculty/Prasad Raju.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Raju </h4>
+                                        <h6 class="category text-muted"> Director </h6>
+                                        <br>
+                                        <p class="card-description"> MSC.University of connecticut USA,Phd </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'faculty/Laxmi.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">LAXMI DANDU </h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description"> MSC. Computer Science experience in university
+                                            suggestions and Applications </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'faculty/Neelima.jpeg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Neelima</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <p class="card-description">MBA Human Resources Experience in University
+                                            Guidance </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'faculty/Alekhya.JPG' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Alekhya</h4>
+                                        <h6 class="category text-muted">University Consultant</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <img class="card-img-top mx-auto d-block"
+                                             src="{% static 'faculty/Jayasurya.jpg' %}"
+                                             alt="Card image cap">
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Jayasurya</h4>
+                                        <h6 class="category text-muted">Verbal & Quant Faculty </h6>
+                                        <br>
+                                        <p class="card-description">MSC.Entrepreneurship , Brown University </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#">
+                                            <img class="img"
+                                                 src="{% static 'faculty/DSC6532copy.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Janaki M</h4>
+                                        <h6 class="category text-muted">Student counselor</h6>
+                                        <br>
+                                        <p class="card-description"> Expert University Counselor based in Australia and
+                                            canada </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'faculty/Prasad Ravi.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Prasad Ravi</h4>
+                                        <h6 class="category text-muted">Senior Verbal Faculty</h6>
+                                        <p class="card-description">MA Political Science ,20+years Experience in
+                                            teaching </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-profile">
+                                    <div class="card-avatar">
+                                        <a href="#"> <img class="img"
+                                                          src="{% static 'faculty/RK Sir.jpg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="table">
+                                        <h4 class="card-caption">Krishna Reddy </h4>
+                                        <h6 class="category text-muted">Senior Math Faculty</h6>
+                                        <p class="card-description"> 15+ Year's Experience in teaching GRE,GMAT and CAT
+                                            Courses </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Second slide-->
+
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+
