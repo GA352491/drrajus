@@ -17,5 +17,6 @@ urlpatterns = [
     path('privacy/', views.privacy, name='privacy'),
     path('blog/', views.blog, name='blog'),
     path('blog_view/<pk>', views.blog_view, name='blog_view'),
-    path('content', views.content, name='content'),
+    path('content/', views.content, name='content'),
+    path('email/', views.email, name='email'),
 ]
