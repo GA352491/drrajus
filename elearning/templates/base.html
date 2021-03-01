@@ -120,16 +120,20 @@
                     <h6 class="text-uppercase font-weight-bold">Courses</h6>
                     <hr class=" mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a href="#" style="color: #4D7356!important;text-decoration:none">GRE</a>
+                        <a href="{% url 'courses' %}" style="color: #4D7356!important;text-decoration:none">GRE</a>
 
                     <p>
-                        <a href="#" style="color: #4D7356!important;text-decoration:none">TOFEL</a>
+                        <a href="{% url 'courses' %}" style="color: #4D7356!important;text-decoration:none">TOFEL</a>
                     </p>
                     <p>
-                        <a href="#" style="color: #4D7356!important;text-decoration:none">ILETS</a>
+                        <a href="{% url 'courses' %}" style="color: #4D7356!important;text-decoration:none">IELTS</a>
                     </p>
                     <p>
-                        <a href="#" style="color: #4D7356!important;text-decoration:none">PERT</a>
+                        <a href="#" style="color: #4D7356!important;text-decoration:none">PTE</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'courses' %}" style="color: #4D7356!important;text-decoration:none">Duo
+                            Lingo</a>
                     </p>
 
                 </div>
@@ -142,16 +146,16 @@
                     <h6 class="text-uppercase font-weight-bold">Useful links</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a class="dark-grey-text" href="#!"
-                           style="color: #4D7356!important;text-decoration:none">Careers</a>
+                        <a class="dark-grey-text" href="{% url 'courses' %}"
+                           style="color: #4D7356!important;text-decoration:none">Courses</a>
                     </p>
                     <p>
-                        <a class="dark-grey-text" href="#!"
+                        <a class="dark-grey-text" href="{% url 'blog' %}"
                            style="color: #4D7356!important;text-decoration:none">Blog</a>
                     </p>
                     <p>
-                        <a class="dark-grey-text" href="#!"
-                           style="color: #4D7356!important;text-decoration:none">FAQ</a>
+                        <a class="dark-grey-text" href="{% url 'consultancy'  %}"
+                           style="color: #4D7356!important;text-decoration:none">Application Guidance</a>
                     </p>
                     <p>
                         <a class="dark-grey-text" href="#!"
@@ -187,9 +191,10 @@
         <div class="container">
 
             <div>
-                <div class="footer-copyright  text-black-50 py-3" >© 2020 Copyright:
+                <div class="footer-copyright  text-black-50 py-3">© 2020 Copyright:
                     <a class="dark-grey-text" href="#" style="color: #003366"> A -> D </a>
-                    <p class="text muted" style="float: right"><a href="{% url 'privacy' %}">Privacy Policy</a> | <a href="{% url 'terms' %}">Terms and conditions</a></p>
+                    <p class="text muted" style="float: right"><a href="{% url 'privacy' %}">Privacy Policy</a> | <a
+                            href="{% url 'terms' %}">Terms and conditions</a></p>
                 </div>
             </div>
 
