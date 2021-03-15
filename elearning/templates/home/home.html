@@ -19,26 +19,23 @@
 {% endblock %}
 
 {% block content %}
+ {% include 'snippets/socialmedia_icons.html' %}
 
-    <div style="padding-top: 40px" class="container-fluid">
-        <div style="padding-bottom: 30px;padding-top:30px ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 order-2  order-lg-2" style="margin-top: 80px;">
-                        <h2 style="color: #6088c0">Who we are?</h2>
-                        <h4 style=""> Established in 2006, we have coached and guided thousands of students to top
-                            foreign
-                            Universities around the world.
-                        </h4>
-                    </div>
-                    <div class="col-sm-6 order-1 order-lg-1">
-                        <img src="{% static 'home/4.png' %}" class="img-fluid"
-                             alt="Responsive image">
-                    </div>
+  <div class="container mt-md-1">
+            <div class="row">
+                <div class="col-sm order-2  order-lg-2 mt-md-5 pt-5 ">
+                    <h2 style="color: #6088c0" class="mt-md-5 pt-md-5">Who we are?</h2>
+                    <h4 style="" class="mt-md-5 pt-md-5"> Established in 2006, we have coached and guided thousands of students to top
+                        foreign
+                        Universities around the world.
+                    </h4>
+                </div>
+                <div class="col-sm order-1 order-lg-1 " style="" >
+                    <img src="{% static 'home/first.png' %}"
+                         alt="Responsive image" class="img-fluid" >
                 </div>
             </div>
-        </div>
-    </div>
+   </div>
     <div class="container">
         <div class="row">
             <div class="col-sm order-2 order-lg-1" style="margin-top: 70px">
