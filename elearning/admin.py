@@ -22,8 +22,17 @@ class CoursesAdmin(admin.ModelAdmin):
     list_display = ('course_name', 'price')
 
 
-admin.site.register(Payment, PaymentAdmin)
-admin.site.register(Courses, CoursesAdmin)
+# admin.site.register(Payment, PaymentAdmin)
+# admin.site.register(Courses, CoursesAdmin)
 
 
+class BlogAdmin(admin.ModelAdmin):
+    class Media:
+        js = (r'/Users/anishganga/PycharmProjects/prj3/elearning/static/blogs/tiny.js',)
+
+
+# admin.site.register(Blog,BlogAdmin)
 admin.site.register(Blog)
+
+admin.site.register(Faq)
+admin.site.register(FaqCategory)
