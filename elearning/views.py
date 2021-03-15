@@ -200,8 +200,15 @@ def email(request):
             'Contact details',
             message,
             settings.EMAIL_HOST_USER,
-            ['ga352491@gmail.com'],
+            ['hello@drrajus.com'],
 
         )
         msg.send()
     return redirect('contact')
+
+
+def faq(request):
+    q = Faq.objects.all()
+    c = FaqCategory.objects.all()
+    context = {'q': q, 'c': c}
+    return render(request, 'FAQ/faq.html', context)
