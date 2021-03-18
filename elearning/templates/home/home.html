@@ -22,7 +22,7 @@
     {% include 'snippets/socialmedia_icons.html' %}
     <div class="container mt-md-1">
         <div class="row">
-            <div class="col-sm col-xs col-md order-2  order-lg-2    mt-md-5 pt-5 ">
+            <div class="col-sm-6 col-xs-6 col-md-6 order-2  order-lg-2    mt-md-5 pt-5 ">
                 <h2 style="color: #6088c0" class="mt-md-5 pt-md-5">Who we are?</h2>
                 <h4 style="" class="mt-md-5 pt-md-5"> Established in 2006, we have coached and guided thousands of
                     students to top
@@ -30,7 +30,7 @@
                     Universities around the world.
                 </h4>
             </div>
-            <div class="col-sm col-xs col-md order-1 order-lg-1 " style="">
+            <div class="col-sm-6 col-xs-6 col-md-6 order-1 order-lg-1 " style="">
                 <img src="{% static 'home/first.png' %}"
                      alt="Responsive image" class="img-fluid">
             </div>
@@ -39,7 +39,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm col-xs col-md order-2 order-lg-1" style="margin-top: 70px">
+            <div class="col-sm-6 col-xs-6 col-md-6 order-2 order-lg-1" style="margin-top: 70px">
 
                 <h2 style="color: #6088c0">What do we offer?</h2>
 
@@ -67,7 +67,7 @@
 
             </div>
 
-            <div class="col-sm col-xs col-md  order-1  order-lg-2  mt-md-5 pt-md-5  " style="margin-top: 30px">
+            <div class="col-sm-6 col-xs-6 col-md-6  order-1  order-lg-2  mt-md-5 pt-md-5  " style="margin-top: 30px">
                 <img src="{% static 'home/8294.jpg' %}"
                      class="img-fluid mt-md-5 pt-md-2"
                      alt="Responsive image">
@@ -78,19 +78,20 @@
         </div>
     </div>
 
-    <div class="container" style="padding-top: 100px">
-        <div style="float: left">
-            <h2 style="color: #6088c0"><b>Facts & Figures </b></h2>
-        </div>
-        <div class="row g-2  d-flex  overflow-auto">
-            <div class="col col-xs-6 col-md-6 col-sm-6 col-12">
+    <div class="container col-md-9" style="padding-top: 100px">
+
+        <h2 style="color: #6088c0;" ><b>Facts & Figures </b></h2>
+
+        <div class="row g-2 d-flex  ">
+            <!--<div class="row d-flex flex-row flex-nowrap overflow-auto">-->
+            <div class="col col-sm-6 col-12">
                 <div class="d-flex" style="border: none">
                     <div>
                         <div class="card shadow" style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
                             <div class="card-body">
 
-                                <i class="fas fa-user-graduate "
-                                   style="font-size: 60px;color: #6088c0!important;">
+                                <i class="fas fa-user-graduate"
+                                   style="font-size: 60px;color: #6088c0!important;padding-left: 6px">
 
                                 </i>
                             </div>
@@ -105,14 +106,14 @@
 
                 </div>
             </div>
-            <div class="col col-xs-6 col-md-6 col-sm-6 col-12">
-                <div class="d-flex" style="border: none">
+            <div class="col col-sm-6 col-12">
+                <div class="d-flex " style="border: none">
                     <div>
                         <div class="card shadow"
                              style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
                             <div class="card-body">
                                 <i class="fas fa-university float-left"
-                                   style="font-size: 60px;color: #6088c0!important;"></i>
+                                   style="font-size: 60px;color: #6088c0!important;padding-left: 1px"></i>
                             </div>
                         </div>
                         <div style="float: right;padding-top: 20px;padding-left: 20px">
@@ -176,7 +177,7 @@
         </div>
     </div>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide mt-5 pt-3" data-bs-ride="carousel">
 
 
         <div class="carousel-inner">
