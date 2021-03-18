@@ -19,26 +19,27 @@
 {% endblock %}
 
 {% block content %}
- {% include 'snippets/socialmedia_icons.html' %}
-
-  <div class="container mt-md-1">
-            <div class="row">
-                <div class="col-sm order-2  order-lg-2 mt-md-5 pt-5 ">
-                    <h2 style="color: #6088c0" class="mt-md-5 pt-md-5">Who we are?</h2>
-                    <h4 style="" class="mt-md-5 pt-md-5"> Established in 2006, we have coached and guided thousands of students to top
-                        foreign
-                        Universities around the world.
-                    </h4>
-                </div>
-                <div class="col-sm order-1 order-lg-1 " style="" >
-                    <img src="{% static 'home/first.png' %}"
-                         alt="Responsive image" class="img-fluid" >
-                </div>
+    {% include 'snippets/socialmedia_icons.html' %}
+    <div class="container mt-md-1">
+        <div class="row">
+            <div class="col-sm col-xs col-md order-2  order-lg-2    mt-md-5 pt-5 ">
+                <h2 style="color: #6088c0" class="mt-md-5 pt-md-5">Who we are?</h2>
+                <h4 style="" class="mt-md-5 pt-md-5"> Established in 2006, we have coached and guided thousands of
+                    students to top
+                    foreign
+                    Universities around the world.
+                </h4>
             </div>
-   </div>
+            <div class="col-sm col-xs col-md order-1 order-lg-1 " style="">
+                <img src="{% static 'home/first.png' %}"
+                     alt="Responsive image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-sm order-2 order-lg-1" style="margin-top: 70px">
+            <div class="col-sm col-xs col-md order-2 order-lg-1" style="margin-top: 70px">
 
                 <h2 style="color: #6088c0">What do we offer?</h2>
 
@@ -66,9 +67,9 @@
 
             </div>
 
-            <div class="col-sm order-1  order-lg-2 " style="margin-top: 30px">
+            <div class="col-sm col-xs col-md  order-1  order-lg-2  mt-md-5 pt-md-5  " style="margin-top: 30px">
                 <img src="{% static 'home/8294.jpg' %}"
-                     class="img-fluid"
+                     class="img-fluid mt-md-5 pt-md-2"
                      alt="Responsive image">
 
 
@@ -76,34 +77,16 @@
 
         </div>
     </div>
-    <!--
-    <ul class="nav justify-content-center">
 
-        <li class="nav-item">
-            <a class="nav-link " href="https://www.facebook.com/DrrajusMsinUS/" style="color: #3b5998 !important;"><i
-                    class="fab fa-facebook-square"></i></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #fb3958!important;"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #0e76a8 !important;"><i class="fab fa-linkedin"></i></a>
-        </li>
-
-
-    </ul>
-    -->
     <div class="container" style="padding-top: 100px">
         <div style="float: left">
             <h2 style="color: #6088c0"><b>Facts & Figures </b></h2>
         </div>
-        <div class="row d-flex  overflow-auto">
-            <!--<div class="row d-flex flex-row flex-nowrap overflow-auto">-->
-            <div class="col col-sm-6 col-12">
+        <div class="row g-2  d-flex  overflow-auto">
+            <div class="col col-xs-6 col-md-6 col-sm-6 col-12">
                 <div class="d-flex" style="border: none">
                     <div>
-                        <div class="card shadow"
-                             style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
+                        <div class="card shadow" style="border-radius: 50%;height: 100px;width: 100px;float: left;padding-bottom: 10px">
                             <div class="card-body">
 
                                 <i class="fas fa-user-graduate "
@@ -119,15 +102,10 @@
                             <span style="color: #ff8e5e">Students coached  </span>
                         </div>
                     </div>
-                    <!-- <div class="media-body" style="float: right">
-                         <h3>20000<span style="color:#048ABF!important;"><i
-                                 class="fas fa-long-arrow-alt-up"></i></span>
-                         </h3>
-                         <span>Students</span>
-                     </div>-->
+
                 </div>
             </div>
-            <div class="col col-sm-6 col-12">
+            <div class="col col-xs-6 col-md-6 col-sm-6 col-12">
                 <div class="d-flex" style="border: none">
                     <div>
                         <div class="card shadow"
@@ -149,41 +127,6 @@
 
         </div>
     </div>
-    <!--<div style="padding-top: 100px" class="container-fluid">
-        <div style="background-color: #f7f7f7;" class="container-fluid">
-            <div class=" container overflow-hidden">
-                <div class="row">
-                    <div class="col-sm-5 " style="padding-top: 70px;">
-                        <h3 style="color: #6088c0">Find your Course that making your bright future</h3>
-                        <p>
-                            Every student who consults us, comes with a purpose of finding better Education, Economic
-                            realization,
-                            and Skill development. We keep this purpose at the fore-front of our decision making,
-                            through out the
-                            process of Coaching and University guidance.
-                        </p>
-
-                        <div class="d-flex justify-content-center " style="padding-top: 10px">
-                            <a href="{% url 'courses' %}" class="btn btn-md " tabindex="-1" role="button"
-                               aria-disabled="true"
-                               style="background: #ff8e5e!important;color: #F2F2F2!important;">Know
-                                more
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-7" style="margin-top: 70px;margin-bottom: 70px">
-                        <div class="embed-responsive embed-responsive-16by9">
-
-                            <iframe class="embed-responsive-item" width="600px" height="450px" align="right"
-                                    src="https://www.youtube.com/embed/AhZgalyrzCg"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen style="border-radius: 15px;"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 
     <div class="container" style="padding-top: 100px">
         <div style="text-align: center">
@@ -194,14 +137,14 @@
             <div class="row d-flex flex-row flex-nowrap overflow-auto">
                 <div class="col-sm">
                     <img src="{% static 'country/USA.png' %}" class="img-fluid"
-                         alt="Responsive image" style="height: 100px">
+                         alt="Responsive image" style="max-height: 100px;width: auto">
                     <div>
                         <span style="text-align: center">USA</span>
                     </div>
                 </div>
                 <div class="col-sm">
                     <img src="{% static 'country/UK.png' %}" class="img-fluid"
-                         alt="Responsive image" style="height: 100px">
+                         alt="Responsive image" style="max-height: 100px;width: auto">
                     <div>
                         <span style="text-align: center">UK</span>
                     </div>
@@ -209,7 +152,7 @@
                 </div>
                 <div class="col-sm">
                     <img src="{% static 'country/canada.jpg' %}" class="img-fluid"
-                         alt="Responsive image" style="height: 100px">
+                         alt="Responsive image" style="max-height: 100px;width: auto">
 
                     <div>
                         <span style="text-align: center">Canada</span>
@@ -217,14 +160,14 @@
                 </div>
                 <div class="col-sm">
                     <img src="{% static 'country/Europe.png' %}" class="img-fluid"
-                         alt="Responsive image" style="height: 100px;width:200px ">
+                         alt="Responsive image" style="max-height: 100px;width: auto">
                     <div>
                         <span style="text-align: center">Europe</span>
                     </div>
                 </div>
                 <div class="col-sm">
                     <img src="{% static 'country/AUS.png' %}" class="img-fluid"
-                         alt="Responsive image" style="height: 100px">
+                         alt="Responsive image" style="max-height: 100px;width: auto">
                     <div>
                         <span style="text-align: center">Australia</span>
                     </div>
@@ -232,145 +175,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="container">
-        <div class="container">
-            <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
-
-            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Dartmouth.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Johns_Hopkins.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/CaseWesternReserve.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Maryland.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/McGill University.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/NCSU.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Georgia Tech.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/MIT_LOGO.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img src="{% static 'University_Logos/Northwestern University.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/PennState.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3">
-                        <img src="{% static 'University_Logos/Brown_Logo.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 100px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Calgary.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/CMU.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 150px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Columbia.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Cornell_logo.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/DukeUniversity.jpeg' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 150px;"/>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Grenoble.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/Indiana_University.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/NYU_Stern.jpeg' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3 ">
-                        <img src="{% static 'University_Logos/OhioStateUniversity.png' %}" alt="image-responsive"
-                             style="width: 100%;height: auto;max-width: 180px;"/>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>-->
-
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
@@ -723,62 +527,7 @@
         </div>-->
     </div>
 
-    <!--<div class="container-fluid" style="padding-top: 100px;padding-bottom: 10px">
-        <div class="containers h-100">
-            <div class="row align-items-center h-100">
-                <div class="container rounded">
-                    <h2 class="text-center" style="color: #6088c0">Our Admits:</h2>
-                    <section class="customer-logos slider">
-                        <div class="slide"><img src="{% static 'usc.png' %}" alt="image-responsive"
-                                                style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img src="{% static 'Brown_University_Logo_full-700x806.png' %}"
-                                                alt="image-responsive"
-                                                style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img
-                                src="{% static 'duke-university-opinion-and-analysis-medium-duke-university-logo-png-320_320.png' %}"
-                                alt="image-responsive" style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img src="{% static 'husky-logo-lockup-circleR.jpg' %}"
-                                                alt="image-responsive"
-                                                style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img src="{% static 'Purdue-University-logo-vector-01.svg' %}"
-                                                alt="image-responsive"
-                                                style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img src="{% static 'tam-stack.png' %}" alt="image-responsive"
-                                                style="width: 95px;height: 95px"/></div>
-                        <div class="slide"><img
-                                src="{% static 'ucla-logo-png-picture-739283-ucla-logo-png-ucla-college-logo-png-998_998.png' %}"
-                                alt="image-responsive" style="width: 95px;height: 95px"/></div>
 
-                    </section>
-                    <script>
-                        $(document).ready(function () {
-                            $('.customer-logos').slick({
-                                slidesToShow: 6,
-                                slidesToScroll: 1,
-                                autoplay: true,
-                                autoplaySpeed: 1500,
-                                arrows: false,
-                                dots: false,
-                                pauseOnHover: false,
-                                responsive: [{
-                                    breakpoint: 768,
-                                    settings: {
-                                        slidesToShow: 4
-                                    }
-                                }, {
-                                    breakpoint: 520,
-                                    settings: {
-                                        slidesToShow: 3
-                                    }
-                                }]
-                            });
-                        });
-                    </script>
-                </div>
-            </div>
-
-        </div>
-    </div>-->
 
 
 {% endblock %}
