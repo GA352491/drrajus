@@ -45,6 +45,28 @@ class FaqCategory(models.Model):
     def __str__(self):
         return self.category
 
+    
+
+
+class CourseTeam(models.Model):
+    pic = models.ImageField(upload_to='course')
+    name = models.CharField(max_length=100, null=True, blank=True)
+    occupation = models.CharField(max_length=100, null=True, blank=True)
+    description = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class AgTeam(models.Model):
+    pic = models.ImageField(upload_to='AG')
+    name = models.CharField(max_length=100, null=True, blank=True)
+    occupation = models.CharField(max_length=100, null=True, blank=True)
+    description = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Faq(models.Model):
     category = models.ForeignKey(FaqCategory, on_delete=models.CASCADE, null=True)
