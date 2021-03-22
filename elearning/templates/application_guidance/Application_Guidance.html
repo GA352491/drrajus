@@ -235,98 +235,23 @@ We will make sure you draft strong essays and letters that represent your profil
 
     <h3 style="text-align: center;color: #5b80b2">Consultants</h3>
     <div class="container mt-5 pt-3">
-        <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <img class="card-img-top mx-auto d-block"
-                             src="{% static 'faculty/Prasad Raju.jpg' %}"
-                             alt="Card image cap">
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">Dr. Prasad Raju</h4>
-                        <h6 class="category text-muted">Career guidance & University suggestions </h6>
-                        <p class="card-description">University of Connecticut, USA Class of 2004</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <img class="card-img-top mx-auto d-block"
-                             src="{% static 'faculty/Jayasurya.jpg' %}"
-                             alt="Card image cap">
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">Jayasurya</h4>
-                        <h6 class="category text-muted">Career guidance and SOP review</h6>
-                        <p class="card-description">Brown University, USA, Class of 2017 </p>
+        <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
+            {% for data in team %}
+                <div class="col-lg-4">
+                    <div class="card card-profile">
+                        <div class="card-avatar">
+                            <img class="card-img-top mx-auto d-block"
+                                 src="{{ data.pic.url }}"
+                                 alt="Card image cap">
+                        </div>
+                        <div class="table">
+                            <h4 class="card-caption">{{ data.name }}</h4>
+                            <h6 class="category text-muted">{{ data.occupation }} </h6>
+                            <p class="card-description">{{ data.description }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#"> <img class="img"
-                                          src="{% static 'faculty/Ganapathi Raju.jpg' %}">
-                        </a>
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">Ganapathi Raju </h4>
-                        <h6 class="category text-muted">Senior Visa Consultant.</h6>
-                        <p class="card-description"> 20+ Years experience in all types of USA
-                            Visas. </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#"> <img class="img"
-                                          src="{% static 'faculty/Neelima.jpeg' %}">
-                        </a>
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">Neelima</h4>
-                        <h6 class="category text-muted">University Consultant</h6>
-                        <p class="card-description"> Applications guide for USA and Canadian universities </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#"> <img class="img"
-                                          src="{% static 'faculty/Laxmi.JPG' %}">
-                        </a>
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">LAXMI DANDU </h4>
-                        <h6 class="category text-muted">University Consultant</h6>
-                        <p class="card-description"> Applications guide for universities in UK,Canada and USA </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#">
-                            <img class="img"
-                                 src="{% static 'faculty/Alekhya.JPG' %}">
-                        </a>
-                    </div>
-                    <div class="table">
-                        <h4 class="card-caption">Alekhya</h4>
-                        <h6 class="category text-muted">University Consultant</h6>
-                        <p class="card-description"> Applications guide for Australian Universities </p>
-
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
 
         </div>
     </div>
