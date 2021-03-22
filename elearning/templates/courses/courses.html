@@ -14,9 +14,9 @@
 {% endblock %}
 {% block content %}
     <style>
-    .course{
-        border-color: #ff8e5e!important;
-    }
+        .course {
+            border-color: #ff8e5e !important;
+        }
     </style>
 
     <div class="container " style="margin-bottom: 40px;margin-top: 40px">
@@ -170,7 +170,7 @@
         </div>
     </div>
     <div class="testimonials-clean pb-sm-5 pb-md-5 ">
-        <div class="container pb-sm-5 pb-xs-5 " >
+        <div class="container pb-sm-5 pb-xs-5 ">
             <div class="intro">
                 <h2 class="text-center" style="color: #6088c0">Testimonials </h2>
             </div>
@@ -251,6 +251,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
     <div class="container-fluid " style="padding-top: 20px">
         <div class="d-flex justify-content-center">
             <!--Carousel Wrapper-->
@@ -274,162 +280,75 @@
                 <!--/.Indicators-->
 
                 <!--Slides-->
+
                 <div class="carousel-inner" role="listbox">
 
                     <!--First slide-->
+
                     <div class="carousel-item active">
 
                         <div class="row g-2">
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#"> <img class="img"
-                                                          src="{% static 'faculty/Prasad Raju.jpg' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Prasad Raju </h4>
-                                        <h6 class="category text-muted"> Director </h6>
-                                        <br>
-                                        <p class="card-description"> MSC.University of connecticut USA,Phd </p>
+                            {% for data in team %}
+                                {% if forloop.counter <= 4 %}
+                                    <div class="col-lg-3">
+                                        <div class="card card-profile">
+                                            <div class="card-avatar">
+                                                <a href="#"> <img class="img"
+                                                                  src="{{ data.pic.url }}">
+                                                </a>
+                                            </div>
+                                            <div class="table">
+                                                <h4 class="card-caption">{{ data.name }} </h4>
+                                                <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                <br>
+                                                <p class="card-description">{{ data.description }}</p>
 
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#"> <img class="img"
-                                                          src="{% static 'faculty/Laxmi.JPG' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">LAXMI DANDU </h4>
-                                        <h6 class="category text-muted">University Consultant</h6>
-                                        <p class="card-description"> MSC. Computer Science experience in university
-                                            suggestions and Applications </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#"> <img class="img"
-                                                          src="{% static 'faculty/Neelima.jpeg' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Neelima</h4>
-                                        <h6 class="category text-muted">University Consultant</h6>
-                                        <p class="card-description">MBA Human Resources Experience in University
-                                            Guidance </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#">
-                                            <img class="img"
-                                                 src="{% static 'faculty/Alekhya.JPG' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Alekhya</h4>
-                                        <h6 class="category text-muted">University Consultant</h6>
-                                        <br>
-                                        <p class="card-description"> Expert University Counselor based in Australia and
-                                            canada </p>
-
-                                    </div>
-                                </div>
-                            </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
-
-
                     </div>
                     <!--/.First slide-->
 
                     <!--Second slide-->
                     <div class="carousel-item">
                         <div class="row g-2">
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <img class="card-img-top mx-auto d-block"
-                                             src="{% static 'faculty/Jayasurya.jpg' %}"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Jayasurya</h4>
-                                        <h6 class="category text-muted">Verbal & Quant Faculty </h6>
-                                        <br>
-                                        <p class="card-description">MSC.Entrepreneurship , Brown University </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#">
-                                            <img class="img"
-                                                 src="{% static 'faculty/DSC6532copy.jpg' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Janaki M</h4>
-                                        <h6 class="category text-muted">Student counselor</h6>
-                                        <br>
-                                        <p class="card-description"> Expert University Counselor based in Australia and
-                                            canada </p>
+                            {% for data in team %}
+                                {% if forloop.counter > 4 %}
+                                    <div class="col-lg-3">
+                                        <div class="card card-profile">
+                                            <div class="card-avatar">
+                                                <a href="#"> <img class="img"
+                                                                  src="{{ data.pic.url }}">
+                                                </a>
+                                            </div>
+                                            <div class="table">
+                                                <h4 class="card-caption">{{ data.name }} </h4>
+                                                <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                <br>
+                                                <p class="card-description">{{ data.description }}</p>
 
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#"> <img class="img"
-                                                          src="{% static 'faculty/Prasad Ravi.jpg' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Prasad Ravi</h4>
-                                        <h6 class="category text-muted">Senior Verbal Faculty</h6>
-                                        <p class="card-description">MA Political Science ,20+years Experience in
-                                            teaching </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
-                                        <a href="#"> <img class="img"
-                                                          src="{% static 'faculty/RK Sir.jpg' %}">
-                                        </a>
-                                    </div>
-                                    <div class="table">
-                                        <h4 class="card-caption">Krishna Reddy </h4>
-                                        <h6 class="category text-muted">Senior Math Faculty</h6>
-                                        <p class="card-description"> 15+ Year's Experience in teaching GRE,GMAT and CAT
-                                            Courses </p>
-
-                                    </div>
-                                </div>
-                            </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
-                    </div>
-                    <!--/.Second slide-->
 
+
+                    </div>
+                    <!--/.Slides-->
 
                 </div>
-                <!--/.Slides-->
-
+                <!--/.Carousel Wrapper-->
             </div>
-            <!--/.Carousel Wrapper-->
         </div>
     </div>
+
+
+
+
+
 {% endblock %}
