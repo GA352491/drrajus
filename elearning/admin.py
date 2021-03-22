@@ -36,3 +36,5 @@ admin.site.register(Blog)
 
 admin.site.register(Faq)
 admin.site.register(FaqCategory)
+admin.site.register(CourseTeam)
+admin.site.register(AgTeam)
