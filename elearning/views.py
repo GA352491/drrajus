@@ -22,11 +22,17 @@ def home(request):
 
 
 def courses(request):
-    return render(request, 'courses/courses.html')
+    team = CourseTeam.objects.all()
+    context = {'team': team}
+    return render(request, 'courses/courses.html', context)
+
 
 
 def consultancy(request):
-    return render(request, 'application_guidance/Application_Guidance.html')
+    team = AgTeam.objects.all()
+    context = {'team': team}
+
+    return render(request, 'application_guidance/Application_Guidance.html', context)
 
 
 def contact(request):
