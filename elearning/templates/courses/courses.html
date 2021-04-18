@@ -18,6 +18,10 @@
             border-color: #ff8e5e !important;
         }
 
+        .roll {
+            padding-top: 100px
+        }
+
         .roll li {
             width: 10px;
             height: 10px;
@@ -26,11 +30,27 @@
 
 
         }
+
+        .testimonials {
+            min-height: 420px;
+
+
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+            top: 480px;
+        }
+        .card-profile{
+            border-radius: 15px;
+            border: 30px;
+        }
+
     </style>
     <div class="container  " style="margin-bottom: 40px;margin-top: 40px">
         <div class="row g-2">
             <div class="col-lg-3 ">
-                <div class="card course mb-5  mb-lg-0">
+                <div class="card course mb-5  mb-lg-0" style="background: #232659;color: white">
                     <div class="card-content">
                         <div class="card-body d-flex flex-column">
                             <div class="justify-content-center" style="text-align: center">
@@ -39,25 +59,25 @@
                                 <hr style="color: gray">
                                 <div class="container">
 
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         Verbal Module – 16 Classes
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         Analytical writing – 4 Classes
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         Quant – 25 Classes
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         All Material Inclusive
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         Vocabulary Online Course & App
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         10 Full length Mock tests
                                     </p>
-                                    <p style="color: gray"><i class="fas fa-check"></i>
+                                    <p style="color: white"><i class="fas fa-check"></i>
                                         4-6 Weeks Duration (Mon-Sat)
                                     </p>
 
@@ -188,11 +208,14 @@
                 <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
 
                     <!--Indicators-->
+
                     <ol class="carousel-indicators roll">
+
                         <li data-target="#multi-item-example2" data-slide-to="0" class="active"></li>
                         <li data-target="#multi-item-example2" data-slide-to="1"></li>
 
                     </ol>
+
                     <!--/.Indicators-->
 
                     <!--Slides-->
@@ -206,18 +229,41 @@
                             <div class="row g-3 p-3">
 
                                 <div class="col-lg">
-                                    <div class="card shadow"
+                                    <div class="card testimonials shadow"
+                                         style="background:  #232659;color: white;border-radius: 10px;">
+                                        <div class="card-body p-4">
+                                            <div class="card-title">
+                                                <h5> Meher Uddaraju</h5>
+                                                <span style="color: #D9D9D9!important;">GRE 331/340 , TOEFL 116/120</span>
+                                            </div>
+                                            <div class="mt-5 ">
+                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
+                                                instrumental in helping me get high scores in both the tests
+                                            </div>
+                                            <div style="color: #FF9529;" class="mt-5">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="card testimonials shadow"
                                          style="background:  #232659;color: white;border-radius: 10px;">
 
                                         <div class="card-body p-4">
                                             <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
+                                                <h5> Shashank Srigiri</h5>
                                                 <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                               GRE: 331/340 . TOEFL 105/120 ,
+                        University of Massachusetts, Amherst</span>
                                             </div>
                                             <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
+                                                I have been to several GRE coaching institutes and consultancies, and I
+                                                can vouch that Dr.Raju's was the best among them. The people at
+                                                Dr.Raju's are so kind,
+                                                humble, and they want you to succeed
                                             </div>
                                             <div style="color: #FF9529;" class="mt-5">
                                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -228,40 +274,19 @@
                                     </div>
                                 </div>
                                 <div class="col-lg">
-                                    <div class="card shadow"
-                                         style="background:  #232659;color: white;border-radius: 10px">
+                                    <div class="card shadow testimonials"
+                                         style="background:  #232659;color: white;border-radius: 10px;">
 
                                         <div class="card-body p-4">
                                             <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
+                                                <h5> Sai Krishna</h5>
                                                 <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                GRE 321/340, University of
+                        Cincinnati, MS in CS</span>
                                             </div>
                                             <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
-                                            </div>
-                                            <div style="color: #FF9529;" class="mt-5">
-                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i><i
-                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg">
-                                    <div class="card shadow"
-                                         style="background:  #232659;color: white;border-radius: 10px">
-
-                                        <div class="card-body p-4">
-                                            <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
-                                                <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
-                                            </div>
-                                            <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
+                                                I know I am an average student in english and it is no exaggeration that
+                                                they made me to score 321 in GRE , of course you must put ur efforts too
                                             </div>
                                             <div style="color: #FF9529;" class="mt-5">
                                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -279,20 +304,24 @@
                         <!--Second slide-->
                         <div class="carousel-item">
                             <div class="row g-3 p-3">
-
                                 <div class="col-lg">
-                                    <div class="card shadow"
+                                    <div class="card shadow testimonials"
                                          style="background:  #232659;color: white;border-radius: 10px;">
 
                                         <div class="card-body p-4">
                                             <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
+                                                <h5> Charishma Ponuganti</h5>
                                                 <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                GRE: 320/340, University of Southern
+                        California</span>
                                             </div>
                                             <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
+                                                It makes use of one of the best techniques to make a student understand
+                                                the concepts necessary to ace the GRE test. I personally liked the
+                                                supporting materials for
+                                                verbal, and Quant material was exhaustive. The educators were very
+                                                patient when i had
+                                                doubts.
                                             </div>
                                             <div style="color: #FF9529;" class="mt-5">
                                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -303,18 +332,22 @@
                                     </div>
                                 </div>
                                 <div class="col-lg">
-                                    <div class="card shadow"
-                                         style="background:  #232659;color: white;border-radius: 10px">
+                                    <div class="card shadow testimonials"
+                                         style="background:  #232659;color: white;border-radius: 10px;">
 
                                         <div class="card-body p-4">
                                             <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
+                                                <h5> Vivek Neppalli </h5>
                                                 <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                IELTS- 7.5/9</span>
                                             </div>
                                             <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
+                                                heard about Dr. Raju’s from my cousins and friends, who have been
+                                                through their GRE and IELTS training. The faculty was very helpful. We
+                                                were also provided
+                                                with detailed materials. I would definitely suggest Dr Raju's for
+                                                fulfilling your dreams of
+                                                joining in ambitious universities.
                                             </div>
                                             <div style="color: #FF9529;" class="mt-5">
                                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -325,18 +358,19 @@
                                     </div>
                                 </div>
                                 <div class="col-lg">
-                                    <div class="card shadow"
-                                         style="background:  #232659;color: white;border-radius: 10px">
+                                    <div class="card shadow testimonials"
+                                         style="background:  #232659;color: white;border-radius: 10px;">
 
                                         <div class="card-body p-4">
                                             <div class="card-title">
-                                                <h5> Meher Uddaraju</h5>
+                                                <h5> Akanksha Vaddlamanati</h5>
                                                 <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                IELTS 7/9</span>
                                             </div>
                                             <div class="mt-5 ">
-                                                I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                                instrumental in helping me get high scores in both the tests
+                                                It's a wonderful experience being here. Everything here runs based on
+                                                students convenience. Staff and faculty working here are really helpful
+                                                and friendly.
                                             </div>
                                             <div style="color: #FF9529;" class="mt-5">
                                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -386,44 +420,46 @@
                         <div class="carousel-item active">
 
                             <div class="col-lg">
-                                <div class="card shadow "
+                                <div class="card testimonials shadow"
+                                     style="background:  #232659;color: white;border-radius: 10px;">
+                                    <div class="card-body p-4">
+                                        <div class="card-title">
+                                            <h5> Meher Uddaraju</h5>
+                                            <span style="color: #D9D9D9!important;">GRE 331/340 , TOEFL 116/120</span>
+                                        </div>
+                                        <div class="mt-5 ">
+                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
+                                            instrumental in helping me get high scores in both the tests
+                                        </div>
+                                        <div style="color: #FF9529;" class="mt-5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.First slide-->
+
+                        <!--Second slide-->
+                        <div class="carousel-item">
+                            <div class="col-lg">
+                                <div class="card testimonials shadow"
                                      style="background:  #232659;color: white;border-radius: 10px;">
 
                                     <div class="card-body p-4">
                                         <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
+                                            <h5> Shashank Srigiri</h5>
                                             <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                               GRE: 331/340 . TOEFL 105/120 ,
+                        University of Massachusetts, Amherst</span>
                                         </div>
                                         <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
-                                        </div>
-                                        <div style="color: #FF9529;" class="mt-5 ">
-                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.First slide-->
-
-                        <!--Second slide-->
-                        <div class="carousel-item">
-                            <div class="col-lg">
-                                <div class="card shadow" style="background:  #232659;color: white;border-radius: 10px;">
-
-                                    <div class="card-body p-4">
-                                        <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
-                                            <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
-                                        </div>
-                                        <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
+                                            I have been to several GRE coaching institutes and consultancies, and I
+                                            can vouch that Dr.Raju's was the best among them. The people at
+                                            Dr.Raju's are so kind,
+                                            humble, and they want you to succeed
                                         </div>
                                         <div style="color: #FF9529;" class="mt-5">
                                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -436,17 +472,19 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-lg">
-                                <div class="card shadow" style="background:  #232659;color: white;border-radius: 10px;">
+                                <div class="card shadow testimonials"
+                                     style="background:  #232659;color: white;border-radius: 10px;">
 
                                     <div class="card-body p-4">
                                         <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
+                                            <h5> Sai Krishna</h5>
                                             <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                GRE 321/340, University of
+                        Cincinnati, MS in CS</span>
                                         </div>
                                         <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
+                                            I know I am an average student in english and it is no exaggeration that
+                                            they made me to score 321 in GRE , of course you must put ur efforts too
                                         </div>
                                         <div style="color: #FF9529;" class="mt-5">
                                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -459,17 +497,52 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-lg">
-                                <div class="card shadow" style="background:  #232659;color: white;border-radius: 10px;">
+                                <div class="card shadow testimonials"
+                                     style="background:  #232659;color: white;border-radius: 10px;">
 
                                     <div class="card-body p-4">
                                         <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
+                                            <h5> Charishma Ponuganti</h5>
                                             <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                GRE: 320/340, University of Southern
+                        California</span>
                                         </div>
                                         <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
+                                            It makes use of one of the best techniques to make a student understand
+                                            the concepts necessary to ace the GRE test. I personally liked the
+                                            supporting materials for
+                                            verbal, and Quant material was exhaustive. The educators were very
+                                            patient when i had
+                                            doubts.
+                                        </div>
+                                        <div style="color: #FF9529;" class="mt-5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-lg">
+                                <div class="card shadow testimonials"
+                                     style="background:  #232659;color: white;border-radius: 10px;">
+
+                                    <div class="card-body p-4">
+                                        <div class="card-title">
+                                            <h5> Vivek Neppalli </h5>
+                                            <span style="color: #D9D9D9!important;">
+                                IELTS- 7.5/9</span>
+                                        </div>
+                                        <div class="mt-5 ">
+                                            heard about Dr. Raju’s from my cousins and friends, who have been
+                                            through their GRE and IELTS training. The faculty was very helpful. We
+                                            were also provided
+                                            with detailed materials. I would definitely suggest Dr Raju's for
+                                            fulfilling your dreams of
+                                            joining in ambitious universities.
                                         </div>
                                         <div style="color: #FF9529;" class="mt-5">
                                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -482,40 +555,19 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-lg">
-                                <div class="card shadow" style="background:  #232659;color: white;border-radius: 10px;">
+                                <div class="card shadow testimonials"
+                                     style="background:  #232659;color: white;border-radius: 10px;">
 
                                     <div class="card-body p-4">
                                         <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
+                                            <h5> Akanksha Vaddlamanati</h5>
                                             <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
+                                IELTS 7/9</span>
                                         </div>
                                         <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
-                                        </div>
-                                        <div style="color: #FF9529;" class="mt-5">
-                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i
-                                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-lg">
-                                <div class="card shadow" style="background:  #232659;color: white;border-radius: 10px;">
-
-                                    <div class="card-body p-4">
-                                        <div class="card-title">
-                                            <h5> Meher Uddaraju</h5>
-                                            <span style="color: #D9D9D9!important;">
-                                GRE 331/340 , TOEFL 116/120</span>
-                                        </div>
-                                        <div class="mt-5 ">
-                                            I attended the TOEFL and GRE classes at Dr.Raju's, and they were highly
-                                            instrumental in helping me get high scores in both the tests
+                                            It's a wonderful experience being here. Everything here runs based on
+                                            students convenience. Staff and faculty working here are really helpful
+                                            and friendly.
                                         </div>
                                         <div style="color: #FF9529;" class="mt-5">
                                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -534,196 +586,208 @@
             </div>
         </div>
     </div>
+    <div class="mt-5 pt-5">
+    </div>
 
+    <div class="d-lg-block  d-none pt-5   mt-5 mb-5" >
+        <div class="d-flex p-2" style="background: orange">
 
-    <div class="d-lg-block  d-none  mt-5">
-        <div class="container col-10 " style="padding-top: 20px">
-            <div class="d-flex justify-content-center">
-                <!--Carousel Wrapper-->
-                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        </div>
+        <div style="background: black">
+            <div class="container col-10 " style="padding-top: 20px">
+                <div class="d-flex justify-content-center">
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                    <!--Controls-->
-                    <div class="controls-top d-flex justify-content-center">
-                        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
-                                class="fas fa-chevron-left" style="color: #F2594B;font-size: 30px;"></i></a>
-                        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                                class="fas fa-chevron-right"
-                                style="color: #F2594B;font-size: 30px;padding-left: 25px"></i></a>
-                    </div>
-                    <!--/.Controls-->
+                        <!--Controls-->
+                        <div class="controls-top d-flex justify-content-center">
+                            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
+                                    class="fas fa-chevron-left" style="color: #F2594B;font-size: 30px;"></i></a>
+                            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                                    class="fas fa-chevron-right"
+                                    style="color: #F2594B;font-size: 30px;padding-left: 25px"></i></a>
+                        </div>
+                        <!--/.Controls-->
 
-                    <!--Indicators-->
-                    <ol class="carousel-indicators">
-                        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                        <li data-target="#multi-item-example" data-slide-to="1"></li>
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                            <li data-target="#multi-item-example" data-slide-to="1"></li>
 
-                    </ol>
-                    <!--/.Indicators-->
+                        </ol>
+                        <!--/.Indicators-->
 
-                    <!--Slides-->
+                        <!--Slides-->
 
-                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner" role="listbox">
 
-                        <!--First slide-->
+                            <!--First slide-->
 
-                        <div class="carousel-item active">
+                            <div class="carousel-item active">
 
-                            <div class="row g-2">
-                                {% for data in team %}
-                                    {% if forloop.counter <= 4 %}
-                                        <div class="col-lg-3">
-                                            <div class="card card-profile">
-                                                <div class="card-avatar">
-                                                    <a href="#"> <img class="img"
-                                                                      src="{{ data.pic.url }}">
-                                                    </a>
-                                                </div>
-                                                <div class="table">
-                                                    <h4 class="card-caption">{{ data.name }} </h4>
-                                                    <h6 class="category text-muted"> {{ data.occupation }} </h6>
-                                                    <br>
-                                                    <p class="card-description">{{ data.description }}</p>
+                                <div class="row g-2">
+                                    {% for data in team %}
+                                        {% if forloop.counter <= 4 %}
+                                            <div class="col-lg-3">
+                                                <div class="card card-profile">
+                                                    <div class="card-avatar">
+                                                        <a href="#"> <img class="img"
+                                                                          src="{{ data.pic.url }}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="table">
+                                                        <h4 class="card-caption">{{ data.name }} </h4>
+                                                        <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                        <br>
+                                                        <p class="card-description">{{ data.description }}</p>
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    {% endif %}
-                                {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
                             </div>
-                        </div>
-                        <!--/.First slide-->
+                            <!--/.First slide-->
 
-                        <!--Second slide-->
-                        <div class="carousel-item">
-                            <div class="row g-2">
-                                {% for data in team %}
-                                    {% if forloop.counter > 4 %}
-                                        <div class="col-lg-3">
-                                            <div class="card card-profile">
-                                                <div class="card-avatar">
-                                                    <a href="#"> <img class="img"
-                                                                      src="{{ data.pic.url }}">
-                                                    </a>
-                                                </div>
-                                                <div class="table">
-                                                    <h4 class="card-caption">{{ data.name }} </h4>
-                                                    <h6 class="category text-muted"> {{ data.occupation }} </h6>
-                                                    <br>
-                                                    <p class="card-description">{{ data.description }}</p>
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                                <div class="row g-2">
+                                    {% for data in team %}
+                                        {% if forloop.counter > 4 %}
+                                            <div class="col-lg-3">
+                                                <div class="card card-profile">
+                                                    <div class="card-avatar">
+                                                        <a href="#"> <img class="img"
+                                                                          src="{{ data.pic.url }}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="table">
+                                                        <h4 class="card-caption">{{ data.name }} </h4>
+                                                        <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                        <br>
+                                                        <p class="card-description">{{ data.description }}</p>
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
 
+
+                            </div>
+                            <!--/.Slides-->
 
                         </div>
-                        <!--/.Slides-->
-
+                        <!--/.Carousel Wrapper-->
                     </div>
-                    <!--/.Carousel Wrapper-->
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-lg-none   ">
-        <div class="container " style="padding-top: 20px">
-            <div class="d-flex justify-content-center">
-                <!--Carousel Wrapper-->
-                <div id="multi-item-example4" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                    <!--Controls-->
-                    <div class="controls-top d-flex justify-content-center">
-                        <a class="btn-floating" href="#multi-item-example4" data-slide="prev"><i
-                                class="fas fa-chevron-left" style="color: #F2594B;font-size: 30px;"></i></a>
-                        <a class="btn-floating" href="#multi-item-example4" data-slide="next"><i
-                                class="fas fa-chevron-right"
-                                style="color: #F2594B;font-size: 30px;padding-left: 25px"></i></a>
-                    </div>
-                    <!--/.Controls-->
+    <div class="d-lg-none mb-5  ">
+        <div class="d-flex p-2" style="background: orange">
 
-                    <!--Indicators-->
-                    <ol class="carousel-indicators roll">
-                        {% for data in team %}
-                            {% if forloop.counter <= 1 %}
-                                <li data-target="#multi-item-example4" data-slide-to="0" class="active"></li>
+        </div>
+        <div style="background: black">
+            <div class="container " style="padding-top: 20px">
+                <div class="d-flex justify-content-center">
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-example4" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                            {% endif %}
-                            {% if forloop.counter >= 1 %}
-                                <li data-target="#multi-item-example4" data-slide-to="{{ forloop.counter }}"
-                                    class="active"></li>
-                            {% endif %}
-                        {% endfor %}
-                    </ol>
-                    <!--/.Indicators-->
+                        <!--Controls-->
+                        <div class="controls-top d-flex justify-content-center">
+                            <a class="btn-floating" href="#multi-item-example4" data-slide="prev"><i
+                                    class="fas fa-chevron-left" style="color: #F2594B;font-size: 30px;"></i></a>
+                            <a class="btn-floating" href="#multi-item-example4" data-slide="next"><i
+                                    class="fas fa-chevron-right"
+                                    style="color: #F2594B;font-size: 30px;padding-left: 25px"></i></a>
+                        </div>
+                        <!--/.Controls-->
 
-                    <!--Slides-->
+                        <!--Indicators-->
+                        <ol class="carousel-indicators roll">
+                            {% for data in team %}
+                                {% if forloop.counter <= 1 %}
+                                    <li data-target="#multi-item-example4" data-slide-to="0" class="active"></li>
 
-                    <div class="carousel-inner" role="listbox">
+                                {% endif %}
+                                {% if forloop.counter >= 1 %}
+                                    <li data-target="#multi-item-example4" data-slide-to="{{ forloop.counter }}"
+                                        class="active"></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                        <!--/.Indicators-->
 
-                        <!--First slide-->
+                        <!--Slides-->
 
-                        <div class="carousel-item active">
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+
+                            <div class="carousel-item active">
+
+
+                                {% for data in team %}
+                                    {% if forloop.counter <= 1 %}
+                                        <div class="col-lg-3">
+                                            <div class="card card-profile">
+                                                <div class="card-avatar">
+                                                    <a href="#"> <img class="img"
+                                                                      src="{{ data.pic.url }}">
+                                                    </a>
+                                                </div>
+                                                <div class="table">
+                                                    <h4 class="card-caption">{{ data.name }} </h4>
+                                                    <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                    <br>
+                                                    <p class="card-description">{{ data.description }}</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+
+                            </div>
+                            <!--/.First slide-->
+
+                            <!--Second slide-->
 
 
                             {% for data in team %}
-                                {% if forloop.counter <= 1 %}
-                                    <div class="col-lg-3">
-                                        <div class="card card-profile">
-                                            <div class="card-avatar">
-                                                <a href="#"> <img class="img"
-                                                                  src="{{ data.pic.url }}">
-                                                </a>
-                                            </div>
-                                            <div class="table">
-                                                <h4 class="card-caption">{{ data.name }} </h4>
-                                                <h6 class="category text-muted"> {{ data.occupation }} </h6>
-                                                <br>
-                                                <p class="card-description">{{ data.description }}</p>
+                                {% if forloop.counter > 1 %}
+                                    <div class="carousel-item">
+                                        <div class="col-lg-3">
+                                            <div class="card card-profile">
+                                                <div class="card-avatar">
+                                                    <a href="#"> <img class="img"
+                                                                      src="{{ data.pic.url }}">
+                                                    </a>
+                                                </div>
+                                                <div class="table">
+                                                    <h4 class="card-caption">{{ data.name }} </h4>
+                                                    <h6 class="category text-muted"> {{ data.occupation }} </h6>
+                                                    <br>
+                                                    <p class="card-description">{{ data.description }}</p>
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 {% endif %}
                             {% endfor %}
 
+
                         </div>
-                        <!--/.First slide-->
-
-                        <!--Second slide-->
-
-
-                        {% for data in team %}
-                            {% if forloop.counter > 1 %}
-                                <div class="carousel-item">
-                                    <div class="col-lg-3">
-                                        <div class="card card-profile">
-                                            <div class="card-avatar">
-                                                <a href="#"> <img class="img"
-                                                                  src="{{ data.pic.url }}">
-                                                </a>
-                                            </div>
-                                            <div class="table">
-                                                <h4 class="card-caption">{{ data.name }} </h4>
-                                                <h6 class="category text-muted"> {{ data.occupation }} </h6>
-                                                <br>
-                                                <p class="card-description">{{ data.description }}</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-
+                        <!--/.Slides-->
 
                     </div>
-                    <!--/.Slides-->
-
+                    <!--/.Carousel Wrapper-->
                 </div>
-                <!--/.Carousel Wrapper-->
             </div>
         </div>
     </div>
